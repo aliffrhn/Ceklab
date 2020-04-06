@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="<?php echo base_url('./assets/css/bootstrap.min.css')?>" />
     
     <!-- js -->
-    <script src="<?php base_url('./assets/js/jquery-3.4.1.js') ?>"></script>
-    <script src="<?php base_url('./assets/js/popper.js') ?>"></script>
+    <script src="<?php echo base_url('./assets/js/jquery-3.4.1.js') ?>"></script>
+    <script src="<?php echo base_url('./assets/js/popper.js') ?>"></script>
 
      <!-- fontawesome -->
      <script src="https://kit.fontawesome.com/ced76fa7d3.js" crossorigin="anonymous"></script>
