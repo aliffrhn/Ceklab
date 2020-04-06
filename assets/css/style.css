@@ -1,0 +1,25 @@
+.box {
+    color: red;
+    width: 64px;
+    height: 64px;
+    box-shadow: -1px 3px 26px -5px rgba(0, 0, 0, 0.2);
+}
+
+ion-icon {
+    text-align: center;
+    font-size: 32px;
+    color: plum;
+}
+
+.bg-top {
+    align-content: center;
+    background-color: #fafbfc;
+}
+
+.title-bar,.subtitle-bar{
+    color: grey;
+}
+
+/* * {
+    border: 1px solid red;
+} */

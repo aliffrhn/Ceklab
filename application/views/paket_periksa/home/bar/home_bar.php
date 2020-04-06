@@ -1,62 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/style.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/bootstrap.min.css">
     <script src="<?= base_url() ?>/assets/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <title>ceklab app</title>
-    <style type="text/css">
-        .box {
-            color: red;
-            width: 64px;
-            height: 64px;
-            box-shadow: -1px 3px 26px -5px rgba(0, 0, 0, 0.2);
-        }
-
-        ion-icon {
-            text-align: center;
-            font-size: 32px;
-        }
-
-        .bg-top {
-            align-content: center;
-            background-color: #fafbfc;
-        }
-
-        .cn {
-            border: 1px solid red;
-        }
-
-        /* * {
-            border: 1px solid red;
-        } */
-    </style>
 </head>
-
 <body>
     <div class="container-fluid bg-top">
         <div class="p-3">
             <div class="row align-items-center justify-content-left">
                 <div class="col-md-auto">
                     <div class="p-3 bg-white rounded box">
-                        <ion-icon ios="flame-outline" md="flame-sharp"></ion-icon>
+                        <ion-icon name="gift"></ion-icon>
                     </div>
                 </div>
                 <div class="col pt-3 align-self-center">
-                    <h5>Paket Periksa</h4>
-                        <p>Mulai hidup sehat? Ikut CekLab</p>
+                    <h5 class="title-bar"><?php echo $title;?></h4>
+                        <p class="subtitle-bar"><?php echo $subtitle?></p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <p>Hello</p>
-    </div>
-</body>
-
-</html>
