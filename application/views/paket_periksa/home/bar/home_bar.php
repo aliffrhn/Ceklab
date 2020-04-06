@@ -11,7 +11,7 @@
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <title>ceklab app</title>
 </head>
-<body>
+<body class="bg-index">
     <div class="container-fluid bg-top">
         <div class="p-3">
             <div class="row align-items-center justify-content-left">
