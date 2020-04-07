@@ -158,7 +158,7 @@
     }
     .carousel .overview b {
         text-transform: uppercase;
-        color: #1c47e3;
+        color: #449FD9;
     }
     .carousel .carousel-indicators {
         bottom: -40px;
@@ -175,7 +175,7 @@
     }
     .carousel-indicators li.active {
         color: #fff;
-        background: #1c47e3;    
+        background: #449FD9;    
         border: 5px double;    
     }
     /*  */
