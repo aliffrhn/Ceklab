@@ -11,13 +11,15 @@
     <!-- js -->
     <script src="<?php echo base_url('./assets/js/jquery-3.4.1.js') ?>"></script>
     <script src="<?php echo base_url('./assets/js/popper.js') ?>"></script>
+    <script src="<?php echo base_url('./assets/js/bootstrap.min.js') ?>"></script>
+    
 
      <!-- fontawesome -->
      <script src="https://kit.fontawesome.com/ced76fa7d3.js" crossorigin="anonymous"></script>
 </head>
 <style>
-    li {
-        padding-left: 20px;
+    .navbar-nav > li{
+        padding-left:20px;
     }
 
     a:hover{
@@ -60,6 +62,24 @@
         vertical-align: middle;
     }
 
+    /* Mobile */
+    @media (max-width: 450px){
+        
+    }
+
+    /* Tablet */
+    @media (max-width: 990px){
+        .navbar li {
+            margin-top : 15px;
+        }
+        a:hover{
+            border-top: none;
+        }
+        a:active{
+            border-bottom: solid 3px #3357AB;
+            width: 85px;
+        }
+    }
 </style>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
