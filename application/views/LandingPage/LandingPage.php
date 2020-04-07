@@ -379,7 +379,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
+            <div style="margin-top: 20px;" class="col-sm-12">
                 <h2 class="text-center"><b>Apa Kata Sahabat</b> CekLab</h2>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Carousel indicators -->
