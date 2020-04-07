@@ -20,6 +20,6 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('LandingPage/LandingPage');
+		$this->load->view('Transactionpage/TransactionPage');
 	}
 }

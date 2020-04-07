@@ -17,6 +17,10 @@
     <script src="https://kit.fontawesome.com/ced76fa7d3.js" crossorigin="anonymous"></script>
 </head>
 <style>
+    .card {
+        margin: 10px 0px;
+    }
+
     .bg-top {
         align-content: center;
         background-color: #fafbfc;
@@ -57,20 +61,64 @@
         font-size: 32px;
         color: plum;
     }
+
+    /*  */
+
+    /* Mobile */
+    @media (max-width: 450px) {
+        
+        /* Status Button */
+        .status-btn {
+            margin: 10px 5px;
+        }
+        
+        .section-btn-status {
+            margin: 20px 0;
+        }
+        /*  */
+
+        /* Card Transaksi */
+        .card-title{ 
+            font-size: 15px;
+        }
+
+        .card-text {
+            font-size: 14px;
+        }
+
+        .card-text-price {
+            font-size: 34px;
+        }
+        /*  */
+
+        /* etc */
+        .webkit-center {
+            text-align: -webkit-center;
+        }
+        /*  */
+        
+    }
+
+    /* Tablet */
+    @media (max-width: 990px) {
+
+    }
 </style>
 <body>
     <!-- Component Header -->
     <div class="bg-top">
-        <div class="p-3">
-            <div class="row align-items-center justify-content-left">
-                <div class="col-md-auto">
-                    <div class="p-3 bg-white rounded box-shadow">
-                        <i class="fa fa-money" aria-hidden="true"></i>
+        <div class="container">
+            <div class="p-3">
+                <div class="row align-items-center justify-content-left">
+                    <div class="col-md-auto">
+                        <div class="p-3 bg-white rounded box-shadow webkit-center">
+                            <i class="fa fa-money" aria-hidden="true" style="color: #D1BBE6"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="col pt-3 align-self-center">
-                    <h4 class="title-bartitle-bar">Riwayat Transaksi</h4>
-                    <p class="subtitle-bar">Mulai hidup sehat? Ikut CekLab</p>
+                    <div class="col pt-3 align-self-center webkit-center">
+                        <h4 class="title-bartitle-bar">Riwayat Transaksi</h4>
+                        <p class="subtitle-bar">Mulai hidup sehat? Ikut CekLab</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -78,25 +126,25 @@
     <!-- Component Bottom -->
     <div class="bg-bot">
         <div class="container">
-            <div class="float-right">
+            <div class="section-btn-status float-right webkit-center">
                 <!-- Component Status -->
-                <a style="color: #97D3AC" class="status-btn btn btn-success">Selesai</a>
-                <a style="color: #97D3AC" class="status-btn btn btn-success">Selesai</a>
-                <a style="color: #97D3AC" class="status-btn btn btn-success">Selesai</a>
-                <a style="color: #97D3AC" class="status-btn btn btn-success">Selesai</a>
-                <a style="color: #97D3AC" class="status-btn btn btn-success">Selesai</a>
+                <a class="status-btn btn btn-success" style="color: #97D3AC" >Selesai</a>
+                <a class="status-btn btn btn-success" style="color: #97D3AC" >Selesai</a>
+                <a class="status-btn btn btn-success" style="color: #97D3AC" >Selesai</a>
+                <a class="status-btn btn btn-success" style="color: #97D3AC" >Selesai</a>
+                <a class="status-btn btn btn-success" style="color: #97D3AC" >Selesai</a>
             </div>
             <div class="clearfix"></div>
             <div>
                 <!-- Component Card -->
-                <div style="margin: 10px 0px;" class="d-inline-block rounded card w-100">
+                <div class="d-inline-block rounded card w-100">
                     <div class="card-body transaction-card">
                         <div class="d-inline-block">
                             <h5 class="card-title">Screening COVID-19</h5>
-                            <p style="opacity: 0.5;" class="card-text">02 Apr 2020</p>
+                            <p class="card-text" style="opacity: 0.5;" >02 Apr 2020</p>
                         </div>
-                        <div style="margin: 0 auto;" class="d-inline-block float-right">
-                            <h1>448rb</h1>
+                        <div class="d-inline-block float-right" style="margin: 0 auto;" >
+                            <h1 class="card-text-price">448rb</h1>
                         </div>
                     </div>
                 </div>
