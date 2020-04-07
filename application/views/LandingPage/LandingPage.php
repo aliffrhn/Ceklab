@@ -115,6 +115,10 @@
         color: #575B61;
     }
 
+    .section-descheader-card {
+        color: #449FD9;
+    }
+
     .section-img-card {
         align-self: center;
         width: 200px;
@@ -149,6 +153,20 @@
             text-align: center;
         }
         /*  */ 
+
+        /* Card */
+        .section-header-card {
+            font-size: 28px;
+        }
+
+        .section-subheader-card {
+            font-size: 25px;
+        }
+
+        .section-descheader-card {
+            font-size: 20px;
+        }
+        /*  */
     }
 
     /* Tablet */
@@ -193,6 +211,20 @@
         .section-descheader-number {
             font-size: 18px;
             color: #575B61;
+        }
+        /*  */
+
+        /* Card */
+        .section-header-card {
+            font-size: 33px;
+        }
+
+        .section-subheader-card {
+            font-size: 30px;
+        }
+
+        .section-descheader-card {
+            font-size: 16px;
         }
         /*  */
     }
@@ -268,19 +300,19 @@
                 <div class="card">
                     <img class="card-img-top section-img-card" src="https://ceklab.id/wp-content/uploads/2019/09/gostartupindonesia.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title section-header-card">2nd National Winner of Go Startup Indonesia by Bekraf 2019</h5>
+                        <h5 class="card-title section-descheader-card">2nd National Winner of Go Startup Indonesia by Bekraf 2019</h5>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card-img-top section-img-card" src="https://ceklab.id/wp-content/uploads/2019/09/nextdev-1.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title section-header-card">Regional Winner of The Nextdev Social Impact by Telkomsel</h5>
+                        <h5 class="card-title section-descheader-card">Regional Winner of The Nextdev Social Impact by Telkomsel</h5>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card-img-top h-50 section-img-card" style="width:50px;" src="https://ceklab.id/wp-content/uploads/2019/09/idff-2.png" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title section-header-card">One of the "Top 23 Fundable Startups of 2019" Indonesia Fund Fest</h5>
+                        <h5 class="card-title section-descheader-card">One of the "Top 23 Fundable Startups of 2019" Indonesia Fund Fest</h5>
                     </div>
                 </div>
             </div>
