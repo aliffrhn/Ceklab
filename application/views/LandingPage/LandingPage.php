@@ -31,7 +31,7 @@
         padding-left:20px;
     }
 
-    a:hover{
+    .nav-item a:hover{
         border-top: solid 3px #3357AB;
     }
     /*  */
@@ -125,6 +125,61 @@
     }
     /*  */
 
+    /* Carousel  */
+    .carousel {
+        margin: 50px auto;
+        padding: 0 70px;
+    }
+    .carousel .item {
+        color: #999;
+        overflow: hidden;
+        min-height: 120px;
+        font-size: 13px;
+    }
+    .carousel .media img {
+        width: 80px;
+        height: 80px;
+        display: block;
+        border-radius: 50%;
+    }
+    .carousel .testimonial {
+        padding: 0 15px 0 60px ;
+        position: relative;
+    }
+    .carousel .testimonial::before {
+        content: '\93';
+        color: #e2e2e2;
+        font-weight: bold;
+        font-size: 68px;
+        line-height: 54px;
+        position: absolute;
+        left: 15px;
+        top: 0;
+    }
+    .carousel .overview b {
+        text-transform: uppercase;
+        color: #1c47e3;
+    }
+    .carousel .carousel-indicators {
+        bottom: -40px;
+    }
+    .carousel-indicators li, .carousel-indicators li.active {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        margin: 1px 3px;
+    }
+    .carousel-indicators li {	
+        background: #e2e2e2;
+        border: 4px solid #fff;
+    }
+    .carousel-indicators li.active {
+        color: #fff;
+        background: #1c47e3;    
+        border: 5px double;    
+    }
+    /*  */
+
     /* Mobile */
     @media (max-width: 450px) {
         /* Section Sampai Hari Ini */
@@ -165,6 +220,12 @@
 
         .section-descheader-card {
             font-size: 20px;
+        }
+        /*  */
+
+        /* Carousel */
+        .carousel {
+            padding: 0px 30px;
         }
         /*  */
     }
@@ -313,6 +374,124 @@
                     <img class="card-img-top h-50 section-img-card" style="width:50px;" src="https://ceklab.id/wp-content/uploads/2019/09/idff-2.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title section-descheader-card">One of the "Top 23 Fundable Startups of 2019" Indonesia Fund Fest</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="text-center"><b>Apa Kata Sahabat</b> CekLab</h2>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>   
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item carousel-item active">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="media">
+                                        <div class="media-left d-flex mr-3">
+                                            <a href="#">
+                                                <img src="https://placeimg.com/300/300/people" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="testimonial">
+                                                <p>Terimakasih CekLab, recommend banget kinerjanya cepat.</p>
+                                                <p class="overview"><b>Risa Prameswari</b> 36 tahun, Ibu Rumah Tangga</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="media">
+                                        <div class="media-left d-flex mr-3">
+                                            <a href="#">
+                                                <img src="https://placeimg.com/300/300/people" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="testimonial">
+                                                <p>Terimakasih CekLab, recommend banget kinerjanya cepat.</p>
+                                                <p class="overview"><b>Risa Prameswari</b> 36 tahun, Ibu Rumah Tangga</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>			
+                        </div>
+                        <div class="item carousel-item">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="media">
+                                        <div class="media-left d-flex mr-3">
+                                            <a href="#">
+                                                <img src="https://placeimg.com/300/300/people" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="testimonial">
+                                                <p>Terimakasih CekLab, recommend banget kinerjanya cepat.</p>
+                                                <p class="overview"><b>Risa Prameswari</b> 36 tahun, Ibu Rumah Tangga</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="media">
+                                        <div class="media-left d-flex mr-3">
+                                            <a href="#">
+                                                <img src="https://placeimg.com/300/300/people" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="testimonial">
+                                                <p>Terimakasih CekLab, recommend banget kinerjanya cepat.</p>
+                                                <p class="overview"><b>Risa Prameswari</b> 36 tahun, Ibu Rumah Tangga</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>			
+                        </div>
+                        <div class="item carousel-item">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="media">
+                                        <div class="media-left d-flex mr-3">
+                                            <a href="#">
+                                                <img src="https://placeimg.com/300/300/people" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="testimonial">
+                                                <p>Terimakasih CekLab, recommend banget kinerjanya cepat.</p>
+                                                <p class="overview"><b>Risa Prameswari</b> 36 tahun, Ibu Rumah Tangga</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="media">
+                                        <div class="media-left d-flex mr-3">
+                                            <a href="#">
+                                                <img src="https://placeimg.com/300/300/people" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="testimonial">
+                                                <p>Terimakasih CekLab, recommend banget kinerjanya cepat.</p>
+                                                <p class="overview"><b>Risa Prameswari</b> 36 tahun, Ibu Rumah Tangga</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>			
+                        </div>
                     </div>
                 </div>
             </div>
