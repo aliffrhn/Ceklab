@@ -18,6 +18,11 @@
      <script src="https://kit.fontawesome.com/ced76fa7d3.js" crossorigin="anonymous"></script>
 </head>
 <style>
+    /* Navbar Section */
+    .navbar {
+        box-shadow: 0 5px 7px -6px #999;
+    }
+
     .navbar-nav > li{
         padding-left:20px;
     }
@@ -25,12 +30,9 @@
     a:hover{
         border-top: solid 3px #3357AB;
     }
+    /*  */
 
-    .navbar {
-        box-shadow: 0 5px 7px -6px #999;
-    }
-
-    /* Jumbotron */
+    /* Section Jumbotron */
     .jumbotron {
         background-color: white;
         margin-bottom: 0;
@@ -87,6 +89,7 @@
         font-size: 20px;
         color: #575B61;
     }
+    /*  */
     
     /* Mobile */
     @media (max-width: 450px) {
@@ -108,6 +111,7 @@
         }
         /*  */
 
+        /* Section Jumbotron */
         .jumbotron-head {
             font-size: 20px;
         }
@@ -115,6 +119,7 @@
         .m-text-center {
             text-align: center;
         }
+        /*  */ 
     }
 
     /* Tablet */
@@ -132,6 +137,19 @@
             width: 85px;
         }
 
+        /* Section Jumbotron */
+        .jumbotron-head {
+            font-size: 30px;
+        }
+
+        .jumbotron-btn {
+            margin-top: 0;
+            width: 100%;
+            padding: 15px;
+            border-radius: 25px;
+        }
+        /*  */
+
         /* Section Sampai Hari Ini */
         .section-header-number {
             font-size: 40px; 
@@ -148,24 +166,16 @@
             color: #575B61;
         }
         /*  */
-        .jumbotron-head {
-            font-size: 30px;
-        }
-
-        .jumbotron-btn {
-            margin-top: 0;
-            width: 100%;
-            padding: 15px;
-            border-radius: 25px;
-        }
     }
 
     /* etc */
     @media (min-width: 576px) {
+        /* Section Jumbotron */
         .jumbotron {
             padding-right: 0;
             padding-left: 0;
         }
+        /*  */
     }
     
 </style>
