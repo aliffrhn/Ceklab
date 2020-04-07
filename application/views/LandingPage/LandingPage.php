@@ -102,9 +102,27 @@
     }
     /*  */
 
+    /* Card */
+    .card {
+        border: none
+    }
+
+    .section-header-card {
+        color: #449FD9;
+    }
+
+    .section-subheader-card {
+        color: #575B61;
+    }
+
+    .section-img-card {
+        align-self: center;
+        width: 200px;
+    }
+    /*  */
+
     /* Mobile */
     @media (max-width: 450px) {
-
         /* Section Sampai Hari Ini */
         .section-header-number {
             font-size: 35px; 
@@ -226,7 +244,7 @@
         </div>
         <div class="text-center">
             <h2 class="font-weight-normal section-header-number">Sampai <b>Hari Ini</b></h2>
-            <h1 class="font-weight-bold section-subheader-number "><span class="count-effect">22364</span></h1>
+            <h1 class="font-weight-bold section-subheader-number"><span class="count-effect">22364</span></h1>
             <h5 class="font-weight-light section-descheader-number">Pemeriksaan Telah Dilakukan</h5>
         </div>
         <div class="slider-autoplay">
@@ -240,6 +258,32 @@
             <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/bio-test-cek-diabet-ceklab.id_-oemumx1i1h4txm1t65rwf5la2lq0ri8e8ehfrdbssw.jpg"></div>
             <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/parahita-gejala-diabet-ceklab.id_-1-oera5rndhunvik8myjekbytb7ny0ugy7svdunich3k.jpg"></div>
             <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/laboratorium-klinik-cito-ceklab.id_-1-oerafwcr5kj4n9ivsx1t7es5p60ft162j0i8uvbq1c.jpg"></div>
+        </div>
+        <div>
+            <div style="margin: 50px 0;" class="text-center">
+                <h2 class="font-weight-normal section-subheader-card">Berkat Dukungan Anda</h1>
+                <h1 class="font-weight-bold section-header-card">CekLab Meraih Beberapa Prestasi</h1>
+            </div>
+            <div class="card-deck text-center">
+                <div class="card">
+                    <img class="card-img-top section-img-card" src="https://ceklab.id/wp-content/uploads/2019/09/gostartupindonesia.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title section-header-card">2nd National Winner of Go Startup Indonesia by Bekraf 2019</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top section-img-card" src="https://ceklab.id/wp-content/uploads/2019/09/nextdev-1.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title section-header-card">Regional Winner of The Nextdev Social Impact by Telkomsel</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top h-50 section-img-card" style="width:50px;" src="https://ceklab.id/wp-content/uploads/2019/09/idff-2.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title section-header-card">One of the "Top 23 Fundable Startups of 2019" Indonesia Fund Fest</h5>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script>
@@ -272,22 +316,26 @@
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
+                        prevArrow: false,
+                        nextArrow: false,
                     }
                 },
                 {
                     breakpoint: 600,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToScroll: 2,
+                        prevArrow: false,
+                        nextArrow: false,
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        prevArrow: false,
+                        nextArrow: false,
                     }
                 }
             ]
