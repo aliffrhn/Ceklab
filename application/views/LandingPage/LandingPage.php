@@ -13,9 +13,13 @@
     <script src="<?php echo base_url('./assets/js/popper.js') ?>"></script>
     <script src="<?php echo base_url('./assets/js/bootstrap.min.js') ?>"></script>
     
-
      <!-- fontawesome -->
      <script src="https://kit.fontawesome.com/ced76fa7d3.js" crossorigin="anonymous"></script>
+
+     <!-- Slick -->
+     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	
 </head>
 <style>
     /* Navbar Section */
@@ -91,6 +95,13 @@
     }
     /*  */
     
+    /* Slider Autoplay */
+    .slider-autoplay {
+        padding: 30px 0px;
+        text-align: -webkit-center;
+    }
+    /*  */
+
     /* Mobile */
     @media (max-width: 450px) {
 
@@ -218,6 +229,18 @@
             <h1 class="font-weight-bold section-subheader-number "><span class="count-effect">22364</span></h1>
             <h5 class="font-weight-light section-descheader-number">Pemeriksaan Telah Dilakukan</h5>
         </div>
+        <div class="slider-autoplay">
+            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/kalgen-bekerjasama-dengan-ceklab.id-untuk-periksa-1-oera6xy41e9s10j73jory651y05jgum4yoqp8ylrbk.jpg"></div>
+            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/kimia-farma-kerjasama-dengan-ceklab.id-untuk-periksa-diabetes-1-oerad6ljestb3tgvnqsm03g7x3e9kidzhknqy3co0g.jpg"></div>
+            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/bio-test-cek-diabet-ceklab.id_-oemumx1i1h4txm1t65rwf5la2lq0ri8e8ehfrdbssw.jpg"></div>
+            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/parahita-gejala-diabet-ceklab.id_-1-oera5rndhunvik8myjekbytb7ny0ugy7svdunich3k.jpg"></div>
+            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/laboratorium-klinik-cito-ceklab.id_-1-oerafwcr5kj4n9ivsx1t7es5p60ft162j0i8uvbq1c.jpg"></div>
+            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/kalgen-bekerjasama-dengan-ceklab.id-untuk-periksa-1-oera6xy41e9s10j73jory651y05jgum4yoqp8ylrbk.jpg"></div>
+            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/kimia-farma-kerjasama-dengan-ceklab.id-untuk-periksa-diabetes-1-oerad6ljestb3tgvnqsm03g7x3e9kidzhknqy3co0g.jpg"></div>
+            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/bio-test-cek-diabet-ceklab.id_-oemumx1i1h4txm1t65rwf5la2lq0ri8e8ehfrdbssw.jpg"></div>
+            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/parahita-gejala-diabet-ceklab.id_-1-oera5rndhunvik8myjekbytb7ny0ugy7svdunich3k.jpg"></div>
+            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/laboratorium-klinik-cito-ceklab.id_-1-oerafwcr5kj4n9ivsx1t7es5p60ft162j0i8uvbq1c.jpg"></div>
+        </div>
     </div>
     <script>
         // Count Effect 
@@ -231,6 +254,18 @@
                     $(this).text(Math.ceil(now));
                 }
             });
+        });
+
+        // Slider Autoplay
+        $('.slider-autoplay').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            speed: 2000,
+            dots: false,
+            prevArrow: false,
+            nextArrow: false
         });
     </script>
 </body>
