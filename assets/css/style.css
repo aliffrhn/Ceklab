@@ -57,6 +57,61 @@ ion-icon {
     box-shadow: 4px 5px 19px -1px rgba(0,0,0,0.15);
 }
 
+.btn-info{
+    color: white;
+    background-color: #16aaff;
+}
+
+.btn-glow{
+    color: white;
+    background-color: #16aaff;
+    box-shadow: 0px 4px 17px -2px rgba(36, 95, 255, 0.5);
+    border-color: #16aaff;
+}
+
+.btn-glow:hover{
+    background-color: #319fdf;
+}
+
+.image-check{
+    background-image: url("https://temandokter.com/assets/image/paket/9e31b7d16b701b8b557b072d5d06456b.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 20%;
+    margin: 0px;
+    filter: opacity(0.5) grayscale(100%);
+}
+
+.image-check-2{
+    background-image: url('https://temandokter.com/assets/image/lab/943aa264345b71345706270dd0fc59db.png');
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+    /* padding: 15%; */
+    margin: 0px;
+    margin-bottom: 0px;
+    /* filter: opacity(0.7) grayscale(70%); */
+}
+
+.overlays{
+    background-color:rgb(32, 27, 58);
+}
+
+.card{
+    color: rgb(70, 70, 70);
+    background-color: white;
+}
+
+.card-header,.card-footer{
+    background-color: white !important;
+}
+
+.card-data{
+    text-align: center;
+    color: white;
+    padding: 20px;
+    backdrop-filter: grayscale(70%) opacity(0.3);
+}
+
 /* * {
     border: 1px solid red;
 } */
