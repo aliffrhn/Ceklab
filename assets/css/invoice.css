@@ -1,0 +1,82 @@
+.invoice-title h2, .invoice-title h3 {
+    display: inline-block;
+}
+
+.table > tbody > tr > .no-line {
+    border-top: none;
+}
+
+.table > thead > tr > .no-line {
+    border-bottom: none;
+}
+
+.table > tbody > tr > .thick-line {
+    border-top: 2px solid;
+}
+
+.panel-footer> p2 {
+	color: red;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.main {
+  margin-left: 50px;
+  margin-right: 80px;
+  width: 65%;
+  padding: 8px 8px 8px 8px;
+}
+
+#ceklab-btn {
+	margin-left: 0px;
+}
+
+.navbar-expand-sm {
+  background-color: #fbfbfb;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+
+.sidnav {
+  background-color: #ffffff;
+}
+
+.body {
+  background-color: #ececec;
+}
+.pt-3 {
+  background-color: #ffffff;
+  margin-left: 32px;
+  width: 75%;
+}

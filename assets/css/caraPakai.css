@@ -1,0 +1,123 @@
+
+#row1 {
+
+	margin-top: 0px;
+
+	 /* The image used */
+	 background: linear-gradient(to right, #0000ff 0%, #00ccff 100%);
+  
+  	/* Full height */
+  	height: 100%;
+
+  	/* Center and scale the image nicely */
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+.main2 {
+	height: 450px;
+	background: #fff;
+}
+
+.main3 {
+	height: 400px;
+    background: linear-gradient(to right, #0000ff 0%, #00ccff 100%);
+}
+
+#col1 {
+	margin-top: 200px;
+	color: #ffffff;
+}
+
+#row2 {
+	
+	margin-top: 0;
+
+	* The image used */
+  background: #fff;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#col2 {
+	margin-top: 150px;
+	margin-bottom: 0px;
+	color: #428bca;
+}
+
+#row3 {
+
+	margin-top: 100px;
+	 /* The image used */
+   background: linear-gradient(to right, #0000ff 0%, #00ccff 100%);
+
+  /* Full height */
+  height: 150%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#col3 {
+	margin-top: 0px;
+	margin-bottom: 50px;
+	color: #ffffff;
+}
+.main1 {
+	height: 600px;
+    background: linear-gradient(to right, #0000ff 0%, #00ccff 100%)
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.main1 #row1 {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	background-image: : url("http://ceklab.id/wp-content/uploads/2019/10/BG-HomePage-High.png");
+	width: 100%;
+	height: 100vh;
+
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+
+#curve2 {
+	position: relative;
+	bottom: 0;
+	height: 50px;
+	width: 100%;
+}
+
+#curve2 path{
+	background: royalblue;
+	width: 100%;
+}
+#curve3{
+	position: relative;
+	bottom: 0;
+	height: 150px;
+	width: 100%;
+}
+
+#curve3 path {
+	fill: #fff;
+}
+
+.img3 {
+	margin-bottom: 0px;
+}
