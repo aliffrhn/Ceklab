@@ -145,6 +145,7 @@
     .carousel .testimonial {
         padding: 0 15px 0 60px ;
         position: relative;
+        text-align: center;
     }
     .carousel .testimonial::before {
         content: '\93';
@@ -382,116 +383,29 @@
             <div style="margin-top: 20px;" class="col-sm-12">
                 <h2 class="text-center"><b>Apa Kata Sahabat</b> CekLab</h2>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Carousel indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>   
-                    <!-- Wrapper for carousel items -->
+                    <!-- Wrapper -->
                     <div class="carousel-inner">
-                        <div class="item carousel-item active">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="media">
-                                        <div class="media-left d-flex mr-3">
-                                            <a href="#">
-                                                <img src="https://placeimg.com/300/300/people" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="testimonial">
-                                                <p>Terimakasih CekLab, recommend banget kinerjanya cepat.</p>
-                                                <p class="overview"><b>Risa Prameswari</b> 36 tahun, Ibu Rumah Tangga</p>
+                        <!-- Item Carousel -->
+                        <?php 
+                            foreach ($testimoni as $key => $data) { 
+                        ?>
+                            <div class="item carousel-item <?php echo $key == 0 ? 'active' : 'null' ?>">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <div class="testimonial">
+                                                    <p><?php echo $data['testimoni_msg'] ?></p>
+                                                    <p class="overview"><b><?php echo $data['nama'] ?></b> <?php echo $data['umur'] ?> tahun, <?php echo $data['status_pekerjaan'] ?></p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media">
-                                        <div class="media-left d-flex mr-3">
-                                            <a href="#">
-                                                <img src="https://placeimg.com/300/300/people" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="testimonial">
-                                                <p>Terimakasih CekLab, recommend banget kinerjanya cepat.</p>
-                                                <p class="overview"><b>Risa Prameswari</b> 36 tahun, Ibu Rumah Tangga</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>			
-                        </div>
-                        <div class="item carousel-item">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="media">
-                                        <div class="media-left d-flex mr-3">
-                                            <a href="#">
-                                                <img src="https://placeimg.com/300/300/people" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="testimonial">
-                                                <p>Terimakasih CekLab, recommend banget kinerjanya cepat.</p>
-                                                <p class="overview"><b>Risa Prameswari</b> 36 tahun, Ibu Rumah Tangga</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media">
-                                        <div class="media-left d-flex mr-3">
-                                            <a href="#">
-                                                <img src="https://placeimg.com/300/300/people" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="testimonial">
-                                                <p>Terimakasih CekLab, recommend banget kinerjanya cepat.</p>
-                                                <p class="overview"><b>Risa Prameswari</b> 36 tahun, Ibu Rumah Tangga</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>			
-                        </div>
-                        <div class="item carousel-item">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="media">
-                                        <div class="media-left d-flex mr-3">
-                                            <a href="#">
-                                                <img src="https://placeimg.com/300/300/people" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="testimonial">
-                                                <p>Terimakasih CekLab, recommend banget kinerjanya cepat.</p>
-                                                <p class="overview"><b>Risa Prameswari</b> 36 tahun, Ibu Rumah Tangga</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media">
-                                        <div class="media-left d-flex mr-3">
-                                            <a href="#">
-                                                <img src="https://placeimg.com/300/300/people" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <div class="testimonial">
-                                                <p>Terimakasih CekLab, recommend banget kinerjanya cepat.</p>
-                                                <p class="overview"><b>Risa Prameswari</b> 36 tahun, Ibu Rumah Tangga</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>			
-                        </div>
+                                </div>			
+                            </div>
+                        <?php 
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
