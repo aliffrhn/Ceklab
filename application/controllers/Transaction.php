@@ -7,7 +7,11 @@
         }
 
         public function index(){
-            $this->load->view('Transactionpage/TransactionPage');
+            $data = [];
+            $data['transaction'] = $this->Transaction_model->get_transaction();
+            $data['status'] = $this->Transaction_model->get_button();
+
+            $this->load->view('Transactionpage/TransactionPage', $data);
         }
     }
 ?>

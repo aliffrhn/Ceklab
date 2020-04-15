@@ -43,12 +43,14 @@
     }
 
     .status-btn {
-        border-color: #97D3AC;
         background-color: white;
-        color: #97D3AC;
         border-width:1.75px;
         border-style:dashed;
         margin: 30px 5px;
+    }
+
+    .status-btn:hover {
+        background-color : white;
     }
     
     .transaction-card {
@@ -128,26 +130,34 @@
         <div class="container">
             <div class="section-btn-status float-right webkit-center">
                 <!-- Component Status -->
-                <a class="status-btn btn btn-success" style="color: #97D3AC" >Selesai</a>
-                <a class="status-btn btn btn-success" style="color: #97D3AC" >Selesai</a>
-                <a class="status-btn btn btn-success" style="color: #97D3AC" >Selesai</a>
-                <a class="status-btn btn btn-success" style="color: #97D3AC" >Selesai</a>
-                <a class="status-btn btn btn-success" style="color: #97D3AC" >Selesai</a>
+                <?php
+                    foreach ($status as $key => $data) {
+                ?>
+                    <a class="status-btn btn btn-success" style="color: #<?php echo $data['kode_warna'] ?>; border-color: #<?php echo $data['kode_warna'] ?>" ><?php echo $data['nama'] ?></a>
+                <?php
+                    }
+                ?>
             </div>
             <div class="clearfix"></div>
             <div>
                 <!-- Component Card -->
-                <div class="d-inline-block rounded card w-100">
-                    <div class="card-body transaction-card">
-                        <div class="d-inline-block">
-                            <h5 class="card-title">Screening COVID-19</h5>
-                            <p class="card-text" style="opacity: 0.5;" >02 Apr 2020</p>
-                        </div>
-                        <div class="d-inline-block float-right" style="margin: 0 auto;" >
-                            <h1 class="card-text-price">448rb</h1>
+                <?php
+                    foreach ($transaction as $key => $data) {
+                ?>
+                    <div class="d-inline-block rounded card w-100">
+                        <div class="card-body transaction-card" style="background-image: linear-gradient(to bottom right, #CA9B39, #<?php $data['kode_warna'] ?>;">
+                            <div class="d-inline-block">
+                                <h5 class="card-title"><?php echo $data['judul'] ?></h5>
+                                <p class="card-text" style="opacity: 0.5;" ><?php echo $data['tanggal'] ?></p>
+                            </div>
+                            <div class="d-inline-block float-right" style="margin: 0 auto;" >
+                                <h1 class="card-text-price">Rp. <?php echo $data['harga_diskon'] == null ? $data['harga'] : $data['harga_diskon'] ?></h1>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php
+                    }
+                ?>
             </div>
         </div>
     </div>
