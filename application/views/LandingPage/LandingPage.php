@@ -337,7 +337,7 @@
         </div>
         <div class="text-center">
             <h2 class="font-weight-normal section-header-number">Sampai <b>Hari Ini</b></h2>
-            <h1 class="font-weight-bold section-subheader-number"><span class="count-effect">22364</span></h1>
+            <h1 class="font-weight-bold section-subheader-number"><span class="count-effect"><?php echo $count_transaction ?></span></h1>
             <h5 class="font-weight-light section-descheader-number">Pemeriksaan Telah Dilakukan</h5>
         </div>
         <div class="slider-autoplay">
