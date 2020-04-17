@@ -4,7 +4,7 @@
             <ul class="nav nav-pills p-3" id="tab" role="tablist">
                 <?php foreach ($city as $val) { ?>
                     <li class="nav-item" id="<?php echo 'tab-' . $val['kota_id'] ?>">
-                        <a class="nav-link m-1" onclick="getList(<?php echo $val['kota_id'] ?>)" href="#<?php echo $val['nama_kota']; ?>" aria-selected="true"><?php echo $val['nama_kota'] ?></a>
+                        <a class="nav-link m-1" onclick="getList(<?php echo $val['kota_id'] ?>)" href="#" aria-selected="true"><?php echo $val['nama_kota'] ?></a>
                     </li>
                 <?php } ?>
             </ul>
