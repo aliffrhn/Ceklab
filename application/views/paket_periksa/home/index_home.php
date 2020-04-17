@@ -44,7 +44,7 @@
                     $.each(a, function(i, v) {
                         $('#packageList').append(
                             "<div class='col-sm-auto'>" +
-                            "<a class='card mb-3 mt-3 text-center shadow-card' style='text-decoration: none' href='http://localhost/Ceklab/index.php/Paket_Periksa_Controller/detail'>" +
+                            "<a class='card mb-3 mt-3 text-center shadow-card' style='text-decoration: none' href='http://localhost/Ceklab/index.php/Paket_Periksa_Controller/detail?id="+v.paket_periksa_id+"'>" +
                             "<img class='card-img-top img-fluid p-3 mx-auto' style='width: 200px; height:200px' src='" + v.photo_url + "' alt='covid-19 poster'>" +
                             "<div class='card-body'>" +
                             "<h6 style='font-weight: bold; color:grey' class='card-title'>" + v.judul + "</h4>" +

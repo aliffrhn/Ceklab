@@ -32,6 +32,8 @@ class Paket_Periksa_Controller extends CI_Controller{
         $id = $_GET['id'];
         $data['subtitle'] = "Mulai hidup sehat? Ikut CekLab";
         $data['package'] = $this->M_paketPeriksa->getPackage($id);
+        $data['pemeriksaan'] = $this->M_paketPeriksa->getPemeriksaan($id);
+        $data['vendor'] = $this->M_paketPeriksa->getVendor($id);
         $this->load->view('paket_periksa/detail/bar/detail_bar', $data);
         $this->load->view('paket_periksa/detail/index_detail',$data);
     }
