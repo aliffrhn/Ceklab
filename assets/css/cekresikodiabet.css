@@ -1,0 +1,61 @@
+.bg-top {
+    align-content: center;
+    background-color: #fafbfc;
+}
+
+.title-bar,.subtitle-bar{
+    color: grey;
+}
+
+
+.box {
+    width: 64px;
+    height: 64px;
+    box-shadow: -1px 3px 26px -5px rgba(0, 0, 0, 0.2);
+}
+
+ion-icon {
+    text-align: center;
+    font-size: 32px;
+    color: plum;
+}
+
+.leftCol {
+    text-align: center;
+    border-right: 1px solid rgba(214, 213, 213, 0.856);
+}
+
+.rightCol {
+    text-align: center;
+}
+
+.col-sm-6 .btnJawaban {
+    color: #4e4b4b;
+    width: 100%;
+    border-radius: 0;
+}
+
+.col-sm-6 .btnJawaban:hover {
+    color: royalblue;
+    background-color: rgba(214, 213, 213, 0.856);
+}
+
+.resultCol {
+    text-align: center;
+}
+
+.col-sm-12 .btnJawaban {
+    width: 100%;
+    border-radius: 0;
+}
+
+.col-sm-12 #txtBerat {
+    box-shadow: none; 
+    border: none; 
+    margin: 0; 
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 0;
+}

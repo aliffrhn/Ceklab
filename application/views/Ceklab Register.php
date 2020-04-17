@@ -4,13 +4,13 @@
         <title>Ceklab Register</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="assets/css/ceklabregis.css"> 
-        <script type="text/javascript" src="assets/script/ceklablogin.js"></script>   
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/ceklabregis.css'); ?>"> 
+        <script type="text/javascript" src="<?php echo base_url('assets/script/ceklablogin.js'); ?>"></script>   
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-        <script type="text/javascript" src="assets/script/jquery.js"></script>
-        <script type="text/javascript" src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="assets/script/popper.js"></script>
+        <link rel="stylesheet" href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css'); ?>">
+        <script type="text/javascript" src="<?php echo base_url('assets/script/jquery.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.min.js');?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/script/popper.js');?>"></script>
     </head>
 <body>
     <div class="container-fluid">
@@ -19,48 +19,53 @@
     <div class="mx-auto app-login-box col-sm-12 col-md-10 col-lg-9 regis-container">
         <h4>Halo,</h4>
         <p>Hanya butuh <a id="highlight">beberapa detik</a> untuk membuat akun Anda.</p>
-    <form>
+        <form action="<?php echo base_url('index.php/ceklabregis/register') ?>" method="post" enctype="multipart/form-data">
+            <?php if(isset($error_message)) { ?>
+			    <div class="alert alert-danger" role="alert">
+				<?= $error_message ?>
+			    </div>
+            <?php } ?>
             <div class="form-row">
                 <div class="col-md-5">
                     <div class="position-relative form-group">
                         <label for="exampleEmail" class="">Email</label>
-                        <input name="txtEmail" id="exampleEmail" placeholder="Email here..." type="text" class="form-control"></div>
+                        <input name="email" id="exampleEmail" placeholder="Email here..." type="text" class="form-control"></div>
                 </div>
                 <div class="col-md-5">
                     <div class="position-relative form-group">
-                        <label for="examplePassword" class="">Username</label>
-                        <input name="txtPass" id="exampleUname" placeholder="Username here..." type="text" class="form-control"></div>
+                        <label for="exampleUsername" class="">Username</label>
+                        <input name="username" id="exampleUname" placeholder="Username here..." type="text" class="form-control"></div>
                 </div>
                 <div class="col-md-5">
                     <div class="position-relative form-group">
-                        <label for="exampleEmail" class="">Name</label>
-                        <input name="txtEmail" id="exampleName" placeholder="Name here..." type="text" class="form-control"></div>
+                        <label for="exampleNama" class="">Name</label>
+                        <input name="nama" id="exampleName" placeholder="Name here..." type="text" class="form-control"></div>
                 </div>
                 <div class="col-md-5">
                     <div class="position-relative form-group">
-                        <label for="exampleEmail" class="">Phone</label>
-                        <input name="txtEmail" id="examplePhone" placeholder="Phone number here..." type="text" class="form-control"></div>
+                        <label for="examplePhone" class="">Phone</label>
+                        <input name="phone_number" id="examplePhone" placeholder="Phone number here..." type="text" class="form-control"></div>
                 </div>
                 <div class="col-md-5">
                     <div class="position-relative form-group">
-                        <label for="exampleEmail" class="">Password</label>
-                        <input name="txtEmail" id="examplePassword" placeholder="Password here..." type="password" class="form-control"></div>
+                        <label for="examplePassword" class="">Password</label>
+                        <input name="password" id="examplePassword" placeholder="Password here..." type="password" class="form-control"></div>
                 </div>
                 <div class="col-md-5">
                     <div class="position-relative form-group">
-                        <label for="exampleEmail" class="">Kota</label>
-                        <input name="txtEmail" id="exampleKota" placeholder="Kota here..." type="text" class="form-control"></div>
+                        <label for="exampleKota" class="">Kota</label>
+                        <input name="kota" id="exampleKota" placeholder="Kota here..." type="text" class="form-control"></div>
                 </div>
             </div>
             <br>
             <div class="position-absolute form-check"></div>
             <div class="d-flex align-items-center regis-footer">
-                <h5>Sudah punya akun? <a href="ceklab-loginpage.php">Login disini yuk.</a></h5>
+                <h5>Sudah punya akun? <a href="<?php echo base_url('index.php/Ceklablogin'); ?>">Login disini yuk.</a></h5>
                 <div class="ml-0">
                     <button type="submit" class="btn">Buat Akun</button>
                 </div>
             </div>           
-    </form>
+         </form>
     </div>
     </div>
     <div class="d-none d-block col-md-9">

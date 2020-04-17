@@ -4,13 +4,13 @@
         <title>Ceklab Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="assets/css/ceklabloginpage.css"> 
-        <script type="text/javascript" src="assets/script/ceklablogin.js"></script>   
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/ceklabloginpage.css'); ?>"> 
+        <script type="text/javascript" src="<?php echo base_url('assets/script/ceklablogin.js'); ?>"></script>   
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-        <script type="text/javascript" src="assets/script/jquery.js"></script>
-        <script type="text/javascript" src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="assets/script/popper.js"></script>
+        <link rel="stylesheet" href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css'); ?>">
+        <script type="text/javascript" src="<?php echo base_url('assets/script/jquery.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.min.js');?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/script/popper.js');?>"></script>
     </head>
     <body>
         <div class="container-fluid">
@@ -83,20 +83,25 @@
                             Selamat datang kembali, yuk login dulu.	
                             </span>
                         </h4>
-                        <h6 class="mt-3 quest">Belum ada akun? <a href="Ceklab Register.php">Yuk register sekarang!</a></h6>
+                        <h6 class="mt-3 quest">Belum ada akun? <a href="<?php echo base_url('index.php/Ceklabregis'); ?>">Yuk register sekarang!</a></h6>
                                 <div class="divider row"></div>
                         <div>
-                            <form>
+                            <form action="<?php echo base_url('index.php/ceklablogin/login') ?>" method="post">
+                            <?php if(isset($error_message)) { ?>
+                            <div class="alert alert-danger" role="alert">
+                              <?= $error_message ?>
+                            </div>
+                            <?php } ?>
                                 <div class="form-row">
                                     <div class="col-md-6">
                                         <div class="position-relative form-group">
                                             <label for="exampleEmail" class="">Username or Email</label>
-                                            <input name="txtEmail" id="exampleEmail" placeholder="Username or Email here..." type="text" class="form-control"></div>
+                                            <input name="username" id="exampleEmail" placeholder="Username or Email here..." type="text" class="form-control"></div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="position-relative form-group">
                                             <label for="examplePassword" class="">Password</label>
-                                            <input name="txtPass" id="examplePassword" placeholder="Password here..." type="password" class="form-control"></div>
+                                            <input name="password" id="examplePassword" placeholder="Password here..." type="password" class="form-control"></div>
                                     </div>
                                 </div>
                                     <div class="position-relative form-check"></div>
