@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="col pt-3 align-self-center">
-                        <h5 class="title-bar"><?php echo $title; ?></h4>
+                        <h5 class="title-bar"><?php echo $package[0]['judul']; ?></h4>
                             <p class="subtitle-bar"><?php echo $subtitle ?></p>
                     </div>
                 </div>

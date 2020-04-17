@@ -18,13 +18,11 @@ class M_paketPeriksa extends CI_Model{
         return $query->result_array();
     }
 
-    public function getListPackageId()
+    public function getPackage($id)
     {
-        $id = $_POST['id'];
-        $this->db->select("paket_periksa_id,judul,photo_url");
+        $this->db->select("*");
         $this->db->from('paket_periksa');
-        $this->db->join('kota', 'paket_periksa.kota_id = kota.kota_id');
-        $this->db->where('paket_periksa.kota_id', $id);
+        $this->db->where('paket_periksa_id', $id);
         $query = $this->db->get();
         return $query->result_array();
     }

@@ -14,10 +14,6 @@ class Paket_Periksa_Controller extends CI_Controller{
         "title" => "Paket Periksa",
         "subtitle" => "Mulai hidup sehat? Ikut CekLab"
     );
-    public $title2 = array(
-        "title" => "Screening COVID-19",
-        "subtitle" => "Mulai hidup sehat? Ikut CekLab"
-    );
 
     public function index(){
         $data['city'] = $this->M_paketPeriksa->getCity();
@@ -33,7 +29,10 @@ class Paket_Periksa_Controller extends CI_Controller{
     }
 
     public function detail(){
-        $this->load->view('paket_periksa/detail/bar/detail_bar', $this->title2);
-        $this->load->view('paket_periksa/detail/index_detail');
+        $id = $_GET['id'];
+        $data['subtitle'] = "Mulai hidup sehat? Ikut CekLab";
+        $data['package'] = $this->M_paketPeriksa->getPackage($id);
+        $this->load->view('paket_periksa/detail/bar/detail_bar', $data);
+        $this->load->view('paket_periksa/detail/index_detail',$data);
     }
 }
