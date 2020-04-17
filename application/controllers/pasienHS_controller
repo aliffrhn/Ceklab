@@ -1,0 +1,27 @@
+<?php
+	class pasienHS_controller extends CI_Controller{
+
+		public function __construct()
+		{
+			parent::__construct();
+			//load model "PasienHS_model"
+			$this->load->model('pasienHS_model');
+			//load library form validation
+			$this->load->library('form_validation');
+		}
+
+
+		public function index()
+		{
+			$data = [];
+			$data['pasien'] = $this->pasienHS_model->getAllPasienHS();
+
+			$this->load->view('pasienHS', $data);
+			
+		}
+
+
+
+
+	}
+?>
