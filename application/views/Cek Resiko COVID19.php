@@ -4,8 +4,7 @@
         <title>Cek Resiko <?php echo $nmPenyakit[0]['nama_penyakit'] ?></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/cekresikocov19.css'); ?>"> 
-        <script type="text/javascript" src="<?php echo base_url('assets/script/ceklablogin.js'); ?>"></script>   
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/cekresikocov19.css'); ?>">   
         <!-- Bootstrap -->
         <link rel="stylesheet" href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css'); ?>">
         <script type="text/javascript" src="<?php echo base_url('assets/script/jquery.js'); ?>"></script>
@@ -23,8 +22,8 @@
                         </div>
                     </div>
                     <div class="col pt-3 align-self-center">
-                        <h5 class="title-bar">Cek Resiko <?php echo $nmPenyakit[0]['nama_penyakit'] ?></h5>
-                            <p class="subtitle-bar"><?php echo $desPenyakit[0]['deskripsi_penyakit']?></p>
+                        <h5 class="title-bar">Cek Resiko COVID-19</h5>
+                            <p class="subtitle-bar">Virus Terbaru 2019 Yang Telah Menular Hingga Ke Seluruh Dunia</p>
                     </div>
                 </div>
             </div>
@@ -41,7 +40,7 @@
                                         <li class="list-group-item">
                                             <div class="widget-content pt-2 pl-0 pb-2 pr-0">
                                                 <div class="text-center">
-                                                    <h6 class="widget-heading mb-0 "><?php echo $quest[0]['pertanyaan']?></h6>
+                                                    <h6 class="widget-heading mb-0 ">Apa sedang / pernah merasa demam, menggigil (suhu 38° C atau lebih tinggi) selama 14 hari terakhir ?</h6>
                                                 </div>
                                             </div>
                                         </li>
@@ -296,9 +295,6 @@
                     <div class="col-sm-12 col-md-12 col-xl-12">
                         <div class="card-shadow-primary card-border mb-3 profile-responsive card">
                             <ul class="list-group list-group-flush">
-                                <input id="score" type="hidden" name="score">
-                                <input id="score_final" type="hidden" name="score_final">
-                                <input type="hidden" name="id_dokter" value="1354">
                                 <li class="list-group-item">
                                     <div class="widget-content pt-2 pl-0 pb-2 pr-0">
                                         <div class="text-center">
@@ -325,14 +321,8 @@
         <script type="text/javascript">
             $( document ).ready(function() {
                 var soal = 1;
-                var poin = [];
-                poin[0] = 0;
-                poin[1] = 0;
-                poin[2] = 0;
-                poin[3] = 0;
-                poin[4] = 0;
-                poin[5] = 0;
-                poin[6] = 0;
+                var jwbYa = 0;
+                var jwbTidak = 0;
                 $(".btnJawaban").on('click', function(event){
                     $("#content" + soal).hide();
                     soal++;
@@ -340,80 +330,61 @@
                 });
 
                     $("#btnJawaban1_1").on('click', function(event){
-                        poin[0] = 0;
+                        jwbTidak += 1;
 					});
 					$("#btnJawaban1_2").on('click', function(event){
-						poin[0] = 2;
+						jwbYa += 1;
 					});
 
 					$("#btnJawaban2_1").on('click', function(event){
-						poin[1] = 0;
+						jwbTidak += 1;
 					});
 					$("#btnJawaban2_2").on('click', function(event){
-						poin[1] = 2;
+						jwbYa += 1;
 					});
 
 					$("#btnJawaban3_1").on('click', function(event){
-						poin[2] = 0;
+						jwbTidak += 1;
 					});
 					$("#btnJawaban3_2").on('click', function(event){
-						poin[2] = 2;
+						jwbYa += 1;
 					});
 
 					$("#btnJawaban4_1").on('click', function(event){
-						poin[3] = 0;
+						jwbTidak += 1;
 					});
 					$("#btnJawaban4_2").on('click', function(event){
-						poin[3] = 2;
+						jwbYa += 1;
 					});
 
 					$("#btnJawaban5_1").on('click', function(event){
-						poin[4] = 0;
+						jwbTidak += 1;
 					});
 					$("#btnJawaban5_2").on('click', function(event){
-						poin[4] = 2;
+						jwbYa += 1;
 					});
 
 					$("#btnJawaban6_1").on('click', function(event){
-						poin[5] = 0;
+						jwbTidak += 1;
 					});
 					$("#btnJawaban6_2").on('click', function(event){
-						poin[5] = 2;
+						jwbYa += 1;
 					});
 
 					$("#btnJawaban7_1").on('click', function(event){
-                        poin[6] = 0;
+                        jwbTidak += 1;
                     });
                     $("#btnJawaban7_2").on('click', function(event){
-                        poin[6] = 2;
+                        jwbYa += 1;
                     });
 
                     $("#btnJawaban8").on('click', function(event){
-                        var score = "";
-                        var score_final = 0;
-                        for(var i = 0 ; i < poin.length ; i++)
-                        {
-                            score += poin[i] + "";
-                            if(i < poin.length-1)
-                            {
-                                score += "+";
-                            }
-                            score_final = score_final + poin[i];
-                
-                        }
-                            $("#score").val(score);
-                            $("#score_final").val(score_final);
-                            var result = 0;
-                            if (score_final >= 10) {
-                                result = 1;
-                            } else {
-                                result = 0;
-                            }
+                        
                     });
 
                     $("form#formSubmit").submit(function(e) {
                         e.preventDefault();  
-                        if (result = 1){
+                        if (jwbYa > jwbTidak){
                                 $('#labelTitle').html("<b>Hasil Cek COVID-19</b>");
                                 $('#labelHeader').html("<b>Anda termasuk kedalam kategori PENGAWASAN. </b>");
                                 $('#labelIsi').html("Segera gunakan masker dan isolasi diri masing-masing, jangan khawatir tetap #dirumahaja");
