@@ -14,8 +14,6 @@ class Profile_model extends CI_Model {
         }else {
             return true;
         }
-        
-        
     }
 }
 

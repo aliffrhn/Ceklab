@@ -7,11 +7,15 @@ class LoginAdmin extends CI_Controller {
             parent::__construct();
             $this->load->library('session');
             $this->load->model('Profile_model');
+            $this->load->model('Transaction_model');
     }
 
     public function index(){
         if($this->session->userdata('variable') !== FALSE) {
-            echo 'Variable is set';
+            $data = [];
+            $data['transaction'] = $this->Transaction_model->get_transaction();
+
+            $this->load->view('DashboardAdmin/DashboardAdmin', $data);
         }else {
             $this->load->view('LoginAdmin/LoginAdmin');
         }  

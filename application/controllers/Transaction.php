@@ -13,5 +13,18 @@
 
             $this->load->view('Transactionpage/TransactionPage', $data);
         }
+
+        public function delete($id){
+            // var_dump($id);
+            $this->Transaction_model->delete_transaction($id);
+
+            redirect('loginadmin/index', 'refresh');
+        }
+
+        public function edit($id){
+            $this->Transaction_model->get_transactionByID($id);
+
+            $this->load->view('EditTransactionAdmin/EditTransactionAdmin', $data);
+        }
     }
 ?>
