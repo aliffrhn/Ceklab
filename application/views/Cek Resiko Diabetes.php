@@ -4,8 +4,7 @@
         <title>Cek Resiko Diabetes</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/cekresikodiabet.css'); ?>"> 
-        <script type="text/javascript" src="<?php echo base_url('assets/script/ceklablogin.js'); ?>"></script>   
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/cekresikodiabet.css'); ?>">   
         <!-- Bootstrap -->
         <link rel="stylesheet" href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css'); ?>">
         <script type="text/javascript" src="<?php echo base_url('assets/script/jquery.js'); ?>"></script>
@@ -264,33 +263,53 @@
                                 <input id="score" type="hidden" name="score">
                                 <input id="score_final" type="hidden" name="score_final">
                                 <input type="hidden" name="id_dokter" value="1354">
-                                <li class="list-group-item">
-                                    <div class="widget-content pt-2 pl-0 pb-2 pr-0">
-                                        <div class="text-center">
-                                            <h6 class="widget-heading mb-0">Sudah siap melihat hasil cek resiko Anda ?</h6>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="p-0 list-group-item">
-                                    <div class="grid-menu grid-menu-2col">
-                                        <div class="no-gutters row">
-                                            <div class="col-sm-12 resultCol">
-                                                <button type="submit" id="btnJawaban8" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
-                                                Lihat Hasil
-                                                </button>
+                                    <li class="list-group-item">
+                                        <div class="widget-content pt-2 pl-0 pb-2 pr-0">
+                                            <div class="text-center">
+                                                <h6 class="widget-heading mb-0">Sudah siap melihat hasil cek resiko Anda ?</h6>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                    <li class="p-0 list-group-item">
+                                        <div class="grid-menu grid-menu-2col">
+                                            <div class="no-gutters row">
+                                                <div class="col-sm-12 resultCol">
+                                                    <button type="submit" id="btnJawaban8" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
+                                                    Lihat Hasil
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </form>                                    
                              </ul>
                         </div>
                     </div>    
                 </div>
 
-                <div id="content9" style="display: none" class="mb-3 card">
-                    <div id="labelTitle" class="card-header">Hasil Cek Diabetes</div>
-                    <div id="labelPesan" class="card-body">Memperoses hasil...</div>
+                <div id="contentResult" style="display: none" class="row">
+                    <div class="col-sm-12 col-md-12 col-xl-12">
+                        <div class="card-shadow-primary card-border mb-3 profile-responsive card">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div class="widget-content pt-2 pl-0 pb-2 pr-0">
+                                        <div class="text-center">
+                                            <h6 id="labelTitle" class="widget-heading mb-0"><b>Menghitung Hasil Cek Diabetes Anda..</b></h6>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="contentMain" style="display: none" class="list-group-item">
+                                    <div class="widget-content pt-2 pl-0 pb-2 pr-0">
+                                        <div class="text-center">
+                                            <h6 id="labelHeader" class="widget-heading mb-0"><b>Header</b></h6>
+                                            <br>
+                                            <h6 id="labelIsi" class="widget-heading mb-0 text-info">Isi</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>    
                 </div>
 
             </div>
@@ -300,14 +319,8 @@
 					var soal = 1;
                     var berat = 0;
                     var tinggi = 0;
-                    var poin = [];
-                    poin[0] = 0;
-                    poin[1] = 0;
-                    poin[2] = 0;
-                    poin[3] = 0;
-                    poin[4] = 0;
-                    poin[5] = 0;
-                    poin[6] = 0;
+                    var positif = 0;
+                    var negatif = 0;
 					$(".btnJawaban").on('click', function(event){
 						$("#content" + soal).hide();
 						soal++;
@@ -315,38 +328,38 @@
 					});
 
 					$("#btnJawaban1_1").on('click', function(event){
-                        poin[0] = 0;
+                        negatif += 1;
 					});
 					$("#btnJawaban1_2").on('click', function(event){
-						poin[0] = 2;
+						positif += 1;
 					});
 
 					$("#btnJawaban2_1").on('click', function(event){
-						poin[1] = 1;
+						positif += 1;
 					});
 					$("#btnJawaban2_2").on('click', function(event){
-						poin[1] = 0;
+						negatif += 1;
 					});
 
 					$("#btnJawaban3_1").on('click', function(event){
-						poin[2] = 0;
+						negatif += 1;
 					});
 					$("#btnJawaban3_2").on('click', function(event){
-						poin[2] = 1;
+						positif += 1;
 					});
 
 					$("#btnJawaban4_1").on('click', function(event){
-						poin[3] = 0;
+						negatif += 1;
 					});
 					$("#btnJawaban4_2").on('click', function(event){
-						poin[3] = 1;
+						positif += 1;
 					});
 
 					$("#btnJawaban5_1").on('click', function(event){
-						poin[4] = 1;
+						positif += 1;
 					});
 					$("#btnJawaban5_2").on('click', function(event){
-						poin[4] = 0;
+						negatif += 1;
 					});
 
 					$("#btnJawaban6").on('click', function(event){
@@ -360,36 +373,25 @@
                     $("#btnJawaban8").on('click', function(event){
                         var nilai = (tinggi / 100) * (tinggi / 100);
                         nilai = berat / nilai;
-                        if(nilai < 25) poin[6] = 0;
-                        else if(nilai >= 25 && nilai <= 30) poin[6] = 1;
-                        else if(nilai >= 30 && nilai <= 30) poin[6] = 2;
-                        else if(nilai > 40) poin[6] = 3;
-
-                        var score = "";
-                        var score_final = 0;
-                        for(var i = 0 ; i < poin.length ; i++)
-                        {
-                            score += poin[i] + "";
-                            if(i < poin.length-1)
-                            {
-                                score += "+";
-                            }
-                            score_final += poin[i];
-                        }
-
-                        $("#score").val(score);
-                        $("#score_final").val(score_final);
+                        if(nilai < 25) negatif += 1;
+                        else if(nilai >= 25 && nilai <= 30) positif += 1;
+                        else if(nilai >= 30 && nilai <= 30) positif += 1;
+                        else if(nilai > 40) positif += 1;
                     });
 
                     $("form#formSubmit").submit(function(e) {
                         e.preventDefault();  
-                        if (score_final > 8){
+                        if (positif > negatif){
                                 $('#labelTitle').html("<b>Hasil Cek Diabetes</b>");
-                                $('#labelPesan').html("Anda termasuk kedalam kategori <b>WASPADA.</b> Yuk segera hidup sehat, hindari makanan yang mengundang diabetes segera mungkin, rutin berolahraga, dan terapkan pola hidup sehat.");
+                                $('#labelHeader').html("Anda termasuk kedalam kategori <b>WASPADA.<b>");
+                                $('#labelIsi').html("Yuk segera terapkan pola hidup sehat, hindari makanan yang mengundang diabetes segera mungkin, rutin berolahraga.");
+                                $('#contentMain').show();
 
                         } else {
                                 $('#labelTitle').html("<b>Hasil Cek Diabetes</b>");
-                                $('#labelPesan').html("Anda termasuk kedalam kategori <b>AMAN.</b> Tetap terapkan pola hidup sehatnya ya.");
+                                $('#labelHeader').html("Anda termasuk kedalam kategori <b>AMAN.</b>");
+                                $('#labelIsi').html("Tetap terapkan pola hidup sehatnya ya.");
+                                $('#contentMain').show();
 
                         };
                         $('#contentResult').show();
