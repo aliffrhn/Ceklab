@@ -1,25 +1,33 @@
 <?php
 	class pasienHS_controller extends CI_Controller{
 
-		public function __construct()
-		{
-			parent::__construct();
-			//load model "PasienHS_model"
-			$this->load->model('pasienHS_model');
-			//load library form validation
-			$this->load->library('form_validation');
-		}
+		class Ceklabregis extends CI_Controller {
 
-
-		public function index()
-		{
-			$data = [];
-			$data['pasien'] = $this->pasienHS_model->getAllPasienHS();
-
-			$this->load->view('pasienHS', $data);
-			
-		}
-
+	function __construct(){
+		parent::__construct();
+		$this->load->model('pasienHS_model');
+		$this->load->helper('url');
+		$this->load->library('session');
+		$this->load->helper('form');
+	}
+	
+	public function index()
+	{
+		$this->load->view('pasienHS');
+	}
+	
+	public function form_pasien(){
+        $gender = $this->input->post('gender', true);
+        $pasien = $this->input->post('pasien', true);
+        $umur = $this->input->post('umur', true);
+        $phone_number = $this->input->post('phone_number', true);
+        $alamat = $this->input->post('alamat', true);
+		$tanggal = $this->input->post('tanggal', true);
+		$waktu = $this->input->post('waktu', true);
+		$keterangan = $this->input->post('keterangan', true);
+		
+		redirect('/invoice');
+		echo "Data Added!";
 
 
 

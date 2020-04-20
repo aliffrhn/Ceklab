@@ -3,7 +3,7 @@
 
 		public function getTransactions() {
 			$query = $this->db->get('transaksi');
-			var_dump($query)
+			//var_dump($query);
 		}
 	}
 ?>

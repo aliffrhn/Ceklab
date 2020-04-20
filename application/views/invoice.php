@@ -5,15 +5,15 @@
 	<title>ceklab - Invoice</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="assets/css/invoice.css"> 
-        <script type="text/javascript" src="assets/script/invoice.js"></script>   
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/invoice.css');?>"> 
+        <script type="text/javascript" src="<?php echo base_url('assets/script/invoice.js');?>"></script>   
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-        <script type="text/javascript" src="assets/script/jquery.js"></script>
-        <script type="text/javascript" src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="assets/script/popper.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css');?>">
+        <script type="text/javascript" src="<?php echo base_url('assets/script/jquery.js');?>"></script>
+        <script type="text/javascript" src="<? echo base_url('assets/vendor/bootstrap/js/bootstrap.min.js');?>"></script>
+        <script type="text/javascript" src="<? echo base_url('assets/script/popper.js');?>"></script>
+        <script src="<?php echo base_url('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js');?>"></script>
+        <script src="<?php echo base_url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js');?>"></script>
 </head>
 <body>
 	<div class="col-xl-12">
