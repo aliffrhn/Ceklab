@@ -22,8 +22,13 @@
             return $data->result_array();
         }
 
-        // public function get_result() {
-
+        // public function insert_result() {
+        //     $query = $this->db->insert('cek_resiko_jawaban',$data);
+        //         if($query){
+        //             return true;
+        //         } else {
+        //             return false;
+        //         }
         // }
 
 }

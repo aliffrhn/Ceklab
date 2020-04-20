@@ -115,12 +115,12 @@
                                     <div class="grid-menu grid-menu-2col">
                                         <div class="no-gutters row">
                                             <div class="col-sm-6 leftCol">
-                                                <button id="btnJawaban2_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban3_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
                                                 Tidak
                                                 </button>
                                             </div>
                                             <div class="col-sm-6 rightCol">
-                                                <button id="btnJawaban2_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban3_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
                                                 Iya
                                                 </button>
                                             </div>
@@ -147,12 +147,12 @@
                                     <div class="grid-menu grid-menu-2col">
                                         <div class="no-gutters row">
                                             <div class="col-sm-6 leftCol">
-                                                <button id="btnJawaban2_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban4_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
                                                 Tidak
                                                 </button>
                                             </div>
                                             <div class="col-sm-6 rightCol">
-                                                <button id="btnJawaban2_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban4_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
                                                 Iya
                                                 </button>
                                             </div>
@@ -179,12 +179,12 @@
                                     <div class="grid-menu grid-menu-2col">
                                         <div class="no-gutters row">
                                             <div class="col-sm-6 leftCol">
-                                                <button id="btnJawaban2_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban5_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
                                                 Tidak
                                                 </button>
                                             </div>
                                             <div class="col-sm-6 rightCol">
-                                                <button id="btnJawaban2_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban5_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
                                                 Iya
                                                 </button>
                                             </div>
@@ -211,12 +211,12 @@
                                     <div class="grid-menu grid-menu-2col">
                                         <div class="no-gutters row">
                                             <div class="col-sm-6 leftCol">
-                                                <button id="btnJawaban2_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban6_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
                                                 Tidak
                                                 </button>
                                             </div>
                                             <div class="col-sm-6 rightCol">
-                                                <button id="btnJawaban2_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban6_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
                                                 Iya
                                                 </button>
                                             </div>
@@ -243,12 +243,12 @@
                                     <div class="grid-menu grid-menu-2col">
                                         <div class="no-gutters row">
                                             <div class="col-sm-6 leftCol">
-                                                <button id="btnJawaban2_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban7_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
                                                 Tidak
                                                 </button>
                                             </div>
                                             <div class="col-sm-6 rightCol">
-                                                <button id="btnJawaban2_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban7_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
                                                 Iya
                                                 </button>
                                             </div>
@@ -315,17 +315,6 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li id="contentWA" style="display: none" class="p-0 list-group-item">
-                                    <div class="grid-menu grid-menu-2col">
-                                        <div class="no-gutters row">    
-                                            <div class="col-sm-12">
-                                                <a id="labelWA" target="_blank" href="#"><button type="submit" id="btnJawaban8" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
-                                                WA Sekarang
-                                                </button></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
                             </ul>
                         </div>
                     </div>    
@@ -342,38 +331,40 @@
                 poin[2] = 0;
                 poin[3] = 0;
                 poin[4] = 0;
+                poin[5] = 0;
+                poin[6] = 0;
                 $(".btnJawaban").on('click', function(event){
                     $("#content" + soal).hide();
                     soal++;
                     $("#content" + soal).show();
                 });
 
-                $("#btnJawaban1_1").on('click', function(event){
+                    $("#btnJawaban1_1").on('click', function(event){
                         poin[0] = 0;
 					});
 					$("#btnJawaban1_2").on('click', function(event){
-						poin[0] = 10
+						poin[0] = 2;
 					});
 
 					$("#btnJawaban2_1").on('click', function(event){
 						poin[1] = 0;
 					});
 					$("#btnJawaban2_2").on('click', function(event){
-						poin[1] = 20;
+						poin[1] = 2;
 					});
 
 					$("#btnJawaban3_1").on('click', function(event){
 						poin[2] = 0;
 					});
 					$("#btnJawaban3_2").on('click', function(event){
-						poin[2] = 50;
+						poin[2] = 2;
 					});
 
 					$("#btnJawaban4_1").on('click', function(event){
 						poin[3] = 0;
 					});
 					$("#btnJawaban4_2").on('click', function(event){
-						poin[3] = 1;
+						poin[3] = 2;
 					});
 
 					$("#btnJawaban5_1").on('click', function(event){
@@ -384,17 +375,17 @@
 					});
 
 					$("#btnJawaban6_1").on('click', function(event){
-						poin[4] = 0;
+						poin[5] = 0;
 					});
 					$("#btnJawaban6_2").on('click', function(event){
-						poin[4] = 2;
+						poin[5] = 2;
 					});
 
 					$("#btnJawaban7_1").on('click', function(event){
-                        poin[4] = 0;
+                        poin[6] = 0;
                     });
                     $("#btnJawaban7_2").on('click', function(event){
-                        poin[4] = 2;
+                        poin[6] = 2;
                     });
 
                     $("#btnJawaban8").on('click', function(event){
@@ -407,21 +398,37 @@
                             {
                                 score += "+";
                             }
-                            score_final += poin[i];
+                            score_final = score_final + poin[i];
+                
                         }
-
-                        $("#score").val(score);
-                        $("#score_final").val(score_final);
+                            $("#score").val(score);
+                            $("#score_final").val(score_final);
+                            var result = 0;
+                            if (score_final >= 10) {
+                                result = 1;
+                            } else {
+                                result = 0;
+                            }
                     });
 
                     $("form#formSubmit").submit(function(e) {
-                        e.preventDefault();    
-                        var formData = new FormData(this);
-
+                        e.preventDefault();  
+                        if (result = 1){
+                                $('#labelTitle').html("<b>Hasil Cek COVID-19</b>");
+                                $('#labelHeader').html("<b>Anda termasuk kedalam kategori PENGAWASAN. </b>");
+                                $('#labelIsi').html("Segera gunakan masker dan isolasi diri masing-masing, jangan khawatir tetap #dirumahaja");
+                                $('#labelSaran').html('Saran : <br>Disarankan langsung mengambil pemeriksaan COVID 19 di lokasi terdekat');
+                                $('#contentMain').show();
+                        } else {
+                                $('#labelTitle').html("<b>Hasil Cek COVID-19</b>");
+                                $('#labelHeader').html("<b>Anda termasuk kedalam kategori AMAN. </b>");
+                                $('#labelIsi').html("Walaupun aman, tetap jangan lengah, jaga keluarga tercinta dengan #dirumahaja.");
+                                $('#labelSaran').html('Saran : Simpan nomor WA hotline virus corona untuk berjaga-jaga dan berbagi info.');
+                                $("#score_final").show();
+                                $('#contentMain').show();
+                        }
                         $('#contentResult').show();
-                        //$('#contentMain').show();
                     });
-
              });
         </script>
     </body>

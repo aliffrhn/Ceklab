@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-    class Ceklabresiko extends CI_Controller {
+    class Ceklabresikocovid19 extends CI_Controller {
         
         function __construct(){
             parent::__construct();
@@ -16,10 +16,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $this->load->view('Cek Resiko COVID19', $data);
             
         }
-
-        // public function resiko() {
-        //     $cekresiko_id = $this->input->post('cekresiko_id', true);
-        // }
-
         
     }   

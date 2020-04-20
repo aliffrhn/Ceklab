@@ -11,6 +11,7 @@
         <script type="text/javascript" src="<?php echo base_url('assets/script/jquery.js'); ?>"></script>
         <script type="text/javascript" src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.min.js');?>"></script>
         <script type="text/javascript" src="<?php echo base_url('assets/script/popper.js');?>"></script>
+        <script src="<?php echo ('https://unpkg.com/ionicons@5.0.0/dist/ionicons.js'); ?>"></script>
     </head>
     <body>
         <div class="container-fluid bg-top">
@@ -106,7 +107,7 @@
                                 <li class="list-group-item">
                                     <div class="widget-content pt-2 pl-0 pb-2 pr-0">
                                         <div class="text-center">
-                                            <h6 class="widget-heading mb-0">Apakah Pernah Diabetes Saat Mengandung ?</h6>
+                                            <h6 class="widget-heading mb-0">Apakah Memiliki Kerabat Dekat Yang Diabet ?</h6>
                                         </div>
                                     </div>
                                 </li>
@@ -114,12 +115,12 @@
                                     <div class="grid-menu grid-menu-2col">
                                         <div class="no-gutters row">
                                             <div class="col-sm-6 leftCol">
-                                                <button id="btnJawaban2_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban3_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
                                                 Tidak
                                                 </button>
                                             </div>
                                             <div class="col-sm-6 rightCol">
-                                                <button id="btnJawaban2_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban3_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
                                                 Iya
                                                 </button>
                                             </div>
@@ -138,7 +139,7 @@
                                 <li class="list-group-item">
                                     <div class="widget-content pt-2 pl-0 pb-2 pr-0">
                                         <div class="text-center">
-                                            <h6 class="widget-heading mb-0">Apakah Memiliki Kerabat Dekat Yang Diabet ?</h6>
+                                            <h6 class="widget-heading mb-0">Apakah Anda Kemungkinan Punya Tekanan Darah Tinggi ?</h6>
                                         </div>
                                     </div>
                                 </li>
@@ -146,12 +147,12 @@
                                     <div class="grid-menu grid-menu-2col">
                                         <div class="no-gutters row">
                                             <div class="col-sm-6 leftCol">
-                                                <button id="btnJawaban2_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban4_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
                                                 Tidak
                                                 </button>
                                             </div>
                                             <div class="col-sm-6 rightCol">
-                                                <button id="btnJawaban2_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban4_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
                                                 Iya
                                                 </button>
                                             </div>
@@ -170,7 +171,7 @@
                                 <li class="list-group-item">
                                     <div class="widget-content pt-2 pl-0 pb-2 pr-0">
                                         <div class="text-center">
-                                            <h6 class="widget-heading mb-0">Apakah Anda Kemungkinan Punya Tekanan Darah Tinggi ?</h6>
+                                            <h6 class="widget-heading mb-0">Apakah Anda Rutin Berolahraga Minimal 1 Minggu 1 Kali ?</h6>
                                         </div>
                                     </div>
                                 </li>
@@ -178,12 +179,12 @@
                                     <div class="grid-menu grid-menu-2col">
                                         <div class="no-gutters row">
                                             <div class="col-sm-6 leftCol">
-                                                <button id="btnJawaban2_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban5_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
                                                 Tidak
                                                 </button>
                                             </div>
                                             <div class="col-sm-6 rightCol">
-                                                <button id="btnJawaban2_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban5_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
                                                 Iya
                                                 </button>
                                             </div>
@@ -202,7 +203,7 @@
                                 <li class="list-group-item">
                                     <div class="widget-content pt-2 pl-0 pb-2 pr-0">
                                         <div class="text-center">
-                                            <h6 class="widget-heading mb-0">Apakah Anda Rutin Berolahraga Minimal 1 Minggu 1 Kali ?</h6>
+                                            <h6 class="widget-heading mb-0">Berapakah Berat Badan Anda?</h6>
                                         </div>
                                     </div>
                                 </li>
@@ -210,13 +211,11 @@
                                     <div class="grid-menu grid-menu-2col">
                                         <div class="no-gutters row">
                                             <div class="col-sm-6 leftCol">
-                                                <button id="btnJawaban2_1" class="btn-icon-vertical btn-square btn-transition br-bl btn btn-outline-link btnJawaban">
-                                                Tidak
-                                                </button>
+                                                <input type="number" id="txtBerat" placeholder="Berat Badan (kg)" class="form-control">
                                             </div>
                                             <div class="col-sm-6 rightCol">
-                                                <button id="btnJawaban2_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
-                                                Iya
+                                                <button id="btnJawaban6" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
+                                                OK
                                                 </button>
                                             </div>
                                         </div>
@@ -234,7 +233,7 @@
                                 <li class="list-group-item">
                                     <div class="widget-content pt-2 pl-0 pb-2 pr-0">
                                         <div class="text-center">
-                                            <h6 class="widget-heading mb-0">Berapakah Berat Badan Anda?</h6>
+                                            <h6 class="widget-heading mb-0">Berapakah Tinggi Badan Anda?</h6>
                                         </div>
                                     </div>
                                 </li>
@@ -242,10 +241,10 @@
                                     <div class="grid-menu grid-menu-2col">
                                         <div class="no-gutters row">
                                             <div class="col-sm-6 leftCol">
-                                                <input type="number" id="txtBerat" placeholder="Berat Badan (kg)" class="form-control">
+                                                <input  type="number" id="txtTinggi" placeholder="Tinggi Badan (cm)" class="form-control">
                                             </div>
                                             <div class="col-sm-6 rightCol">
-                                                <button id="btnJawaban2_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
+                                                <button id="btnJawaban7" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
                                                 OK
                                                 </button>
                                             </div>
@@ -258,36 +257,6 @@
                 </div>
 
                 <div id="content8" style="display: none" class="row">
-                    <div class="col-sm-12 col-md-12 col-xl-12">
-                        <div class="card-shadow-primary card-border mb-3 profile-responsive card">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    <div class="widget-content pt-2 pl-0 pb-2 pr-0">
-                                        <div class="text-center">
-                                            <h6 class="widget-heading mb-0">Berapakah Tinggi Badan Anda?</h6>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="p-0 list-group-item">
-                                    <div class="grid-menu grid-menu-2col">
-                                        <div class="no-gutters row">
-                                            <div class="col-sm-6 leftCol">
-                                                <input  type="number" id="txtTinggi" placeholder="Tinggi Badan (cm)" class="form-control">
-                                            </div>
-                                            <div class="col-sm-6 rightCol">
-                                                <button id="btnJawaban2_2" class="btn-icon-vertical btn-square btn-transition br-br btn btn-outline-link btnJawaban">
-                                                OK
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>    
-                </div>
-
-                <div id="content9" style="display: none" class="row">
                     <div class="col-sm-12 col-md-12 col-xl-12">
                         <div class="card-shadow-primary card-border mb-3 profile-responsive card">
                             <ul class="list-group list-group-flush">
@@ -320,7 +289,7 @@
                 </div>
 
                 <div id="content9" style="display: none" class="mb-3 card">
-                    <div class="card-header">Hasil Cek Diabetes</div>
+                    <div id="labelTitle" class="card-header">Hasil Cek Diabetes</div>
                     <div id="labelPesan" class="card-body">Memperoses hasil...</div>
                 </div>
 
@@ -410,6 +379,20 @@
 
                         $("#score").val(score);
                         $("#score_final").val(score_final);
+                    });
+
+                    $("form#formSubmit").submit(function(e) {
+                        e.preventDefault();  
+                        if (score_final > 8){
+                                $('#labelTitle').html("<b>Hasil Cek Diabetes</b>");
+                                $('#labelPesan').html("Anda termasuk kedalam kategori <b>WASPADA.</b> Yuk segera hidup sehat, hindari makanan yang mengundang diabetes segera mungkin, rutin berolahraga, dan terapkan pola hidup sehat.");
+
+                        } else {
+                                $('#labelTitle').html("<b>Hasil Cek Diabetes</b>");
+                                $('#labelPesan').html("Anda termasuk kedalam kategori <b>AMAN.</b> Tetap terapkan pola hidup sehatnya ya.");
+
+                        };
+                        $('#contentResult').show();
                     });
                 });
         </script>

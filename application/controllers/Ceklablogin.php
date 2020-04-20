@@ -23,7 +23,7 @@ class Ceklablogin extends CI_Controller {
 			$this->session->set_userdata('username', $data['username']);
 			var_dump($data);
 		}else {
-			$data['error_message'] = "Username/Email atau Password Salah";
+			$data['error_message'] = "Username atau Password Salah";
 			$this->load->view('ceklab-loginpage', $data);
 		}
 	}
