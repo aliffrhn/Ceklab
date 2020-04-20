@@ -36,6 +36,11 @@ ion-icon {
 }
 
 .col-sm-6 .btnJawaban:hover {
+    color : royalblue;
+    background-color: rgba(214, 213, 213, 0.856);
+}
+
+.col-sm-12 .btnJawaban:hover {
     color: royalblue;
     background-color: rgba(214, 213, 213, 0.856);
 }
