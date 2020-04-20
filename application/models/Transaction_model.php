@@ -40,6 +40,7 @@
         public function count_transaction(){
             $data = $this->db->get('transaksi');
             $result = count($data->result_array());
+         
             // var_dump($data->result_array());
             return $result;
         }

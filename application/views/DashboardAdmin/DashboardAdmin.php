@@ -47,7 +47,7 @@
                         <td><?php echo $data['username'] ?></td>
                         <td><?php echo $data['keterangan'] ?></td>
                         <td><?php echo $data['nama'] ?></td>
-                        <td><button type="button" class="btn btn-primary">Edit</button><a class="btn btn-danger" href="<?php echo base_url('transaction/delete/').$data['kode_transaksi'] ?>">Delete</a></td>
+                        <td><a class="btn btn-primary" href="<?php echo base_url('transaction/edit/').$data['kode_transaksi'] ?>">Edit</a><a class="btn btn-danger" href="<?php echo base_url('transaction/delete/').$data['kode_transaksi'] ?>">Delete</a></td>
                     </tr>
                 <?php } ?>
             </tbody>

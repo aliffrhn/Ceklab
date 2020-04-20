@@ -4,6 +4,9 @@
         function __construct(){
             parent::__construct();
             $this->load->model('Transaction_model');
+            $this->load->model('Kota_model');
+            $this->load->model('Vendor_model');
+            $this->load->model('Status_model');
         }
 
         public function index(){
@@ -22,7 +25,11 @@
         }
 
         public function edit($id){
-            $this->Transaction_model->get_transactionByID($id);
+            $data = [];
+            $data['transaction'] = $this->Transaction_model->get_transactionByID($id);
+            $data['kota'] = $this->Kota_model->getKota();
+            $data['vendor'] = $this->Vendor_model->getVendor();
+            $data['status'] = $this->Status_model->getStatus();
 
             $this->load->view('EditTransactionAdmin/EditTransactionAdmin', $data);
         }
