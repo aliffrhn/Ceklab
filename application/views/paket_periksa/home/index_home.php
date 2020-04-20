@@ -9,11 +9,14 @@
                 <?php } ?>
             </ul>
         </div>
+        <div id="loader" class="text-center">
+            <span class="spinner-border spinner-border-sm text-primary p-3 m-5"></span>
+        </div>
         <div class="content card-deck p-3">
             <div class="row justify-content-start" id="packageList">
                 <?php foreach ($packages as $val) { ?>
                     <div class="col-sm-auto">
-                        <a class="card mb-3 mt-3 text-center shadow-card" style="text-decoration: none" href="http://localhost/Ceklab/index.php/Paket_Periksa_Controller/detail?id=<?php echo $val['paket_periksa_id']?>">
+                        <a class="card mb-3 mt-3 text-center shadow-card" style="text-decoration: none" href="http://localhost/Ceklab/index.php/Paket_Periksa_Controller/detail?id=<?php echo $val['paket_periksa_id'] ?>">
                             <img class="card-img-top img-fluid p-3 mx-auto" style="width: 200px; height:200px" src="<?php echo $val['photo_url'] ?>" alt="covid-19 poster">
                             <div class="card-body">
                                 <h6 style="font-weight: bold; color:grey" class="card-title"><?php echo $val['judul'] ?></h4>
@@ -27,9 +30,6 @@
     <script>
         function getList(id) {
             $("#packageList").empty();
-            $("#packageList").append(
-                "<h4>Loading. . .</h4>"
-            );
             $.ajax({
                 url: "http://localhost/CekLab/index.php/Paket_Periksa_Controller/getListPackageById",
                 data: {
@@ -37,14 +37,16 @@
                 },
                 type: "POST",
                 cache: true,
+                async: true,
                 timeout: 4000,
                 success: function(response) {
                     $("#packageList").empty();
+                    $("#loader").hide();
                     var a = JSON.parse(response);
                     $.each(a, function(i, v) {
                         $('#packageList').append(
                             "<div class='col-sm-auto'>" +
-                            "<a class='card mb-3 mt-3 text-center shadow-card' style='text-decoration: none' href='http://localhost/Ceklab/index.php/Paket_Periksa_Controller/detail?id="+v.paket_periksa_id+"'>" +
+                            "<a class='card mb-3 mt-3 text-center shadow-card' style='text-decoration: none' href='http://localhost/Ceklab/index.php/Paket_Periksa_Controller/detail?id=" + v.paket_periksa_id + "'>" +
                             "<img class='card-img-top img-fluid p-3 mx-auto' style='width: 200px; height:200px' src='" + v.photo_url + "' alt='covid-19 poster'>" +
                             "<div class='card-body'>" +
                             "<h6 style='font-weight: bold; color:grey' class='card-title'>" + v.judul + "</h4>" +
@@ -59,10 +61,12 @@
 
         $('#tab-1 a').addClass('selected shadow');
         $(document).ready(function() {
+            $("#loader").hide();
 
             $(".nav li a").on("click", function() {
                 $(".nav li a").removeClass("selected shadow");
                 $(this).addClass("selected shadow");
+                $("#loader").show();
             });
 
         });
