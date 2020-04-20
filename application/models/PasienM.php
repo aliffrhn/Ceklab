@@ -1,5 +1,5 @@
 <?php
-	class pasienHS_model extends CI_Model{
+	class PasienM extends CI_Model{
 
 		protected $_table = 'pasien';
 
@@ -9,7 +9,7 @@
 			return $this->db->get('pasien')->result_array();
 		}*/
 
-		if (isset($_POST['submit'])) {
+		/*if (isset($_POST['submit'])) {
 			$gender = $_POST['gender'];
         	$pasien = $_POST['pasien'];
         	$umur = $_POST['umur'];
@@ -20,11 +20,19 @@
 			$keterangan = $_POST['keterangan'];
 
 			$input = "INSERT INTO pasien(gender, pasien, umur, phone_number, alamat, tanggal, waktu, keterangan) VALUES ('$gender','$pasien','$umur','$phone_number','$alamat','$tanggal','$waktu','$keterangan')";
-			$query_input = mysqli_query($conn, $input);
+			$query_input = mysqli_query($conn, $input);		
+		} */
 
-			
-		
+		public function insert_new_pasien($data){
+		$query = $this->db->insert('pasien',$data);
+			if($query){
+				return true;
+			} else {
+				return false;
+			}
+			//var_dump($data);
 		}
+		
 
 	}
 ?>
