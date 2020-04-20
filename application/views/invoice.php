@@ -30,25 +30,25 @@
 			    				<div class="card-deck">
 			                		<div class="card bg-plain border-0">
 			                    		<div class="card-body text-left">
-			                        		<p class="card-text"><strong>Kode       :</strong> F12MJ</p>
-			                        		<p class="card-text"><strong>Tanggal    :</strong> 02 Apr 20</p>
-			                        		<p class="card-text"><strong>Paket      :</strong> Screening COVID-19</p>
+			                        		<p class="card-text"><strong>Kode       :</strong> <?php echo $data['kode_transaksi'];?></p>
+			                        		<p class="card-text"><strong>Tanggal    :</strong> <?php echo $data['tanggal'];?></p>
+			                        		<p class="card-text"><strong>Paket      :</strong> <?php echo $data['paket_periksa_id'];?></p>
 			                    		</div>
 			                		</div>
 			                		<div class="card bg-plain border-0">
 			                    		<div class="card-body text-left">
-			                        		<p class="card-text"><strong>Pasien         :</strong> </p>
-			                        		<p class="card-text"><strong>Umur           :</strong> </p>
-			                         		<p class="card-text"><strong>JK            :</strong> L </p>
-			                          		<p class="card-text"><strong>No. Telepon  :</strong> </p>
+			                        		<p class="card-text"><strong>Pasien         :</strong> <?php echo $data['pasien'];?> </p>
+			                        		<p class="card-text"><strong>Umur           :</strong> <?php echo $data['umur'];?></p>
+			                         		<p class="card-text"><strong>JK            :</strong> <?php echo $data['gender'];?></p>
+			                          		<p class="card-text"><strong>No. Telepon  :</strong> <?php echo $data['phone_number'];?></p>
 			                    		</div>
 			                		</div>
 			                		<div class="card bg-plain border-0">
 			                    		<div class="card-body text-left">
-			                        		<p class="card-text"><strong>Lab            :</strong> Prospek Lab</p>
-			                         		<p class="card-text"><strong>Kota          :</strong> JAKARTA</p>
-			                          		<p class="card-text"><strong>Pemesan      :</strong> Alif Farhan Widyanto</p>
-			                           		<p class="card-text"><strong>Keterangan  :</strong></p>
+			                        		<p class="card-text"><strong>Lab            :</strong> <?php echo $data['vendor_id'];?></p>
+			                         		<p class="card-text"><strong>Kota          :</strong> <?php echo $data['kota_id'];?></p>
+			                          		<p class="card-text"><strong>Pemesan      :</strong> <?php echo $data['username'];?></p>
+			                           		<p class="card-text"><strong>Keterangan  :</strong> <?php echo $data['keterangan'];?></p>
 
 			                    		</div>
 			                		</div>
@@ -87,6 +87,13 @@
 			    							</thead>
 			    							<tbody>
 			    								<!-- foreach ($order->lineItems as $line) or some such thing here -->
+
+			    								<?php 
+			    									$i = 1;
+			    									foreach ($transaksi as $data) {
+			    										# code...
+			    									}
+			    								?>
 			    								<tr>
 			    									<td>1</td>
 			    									<td class="text-center">DARAH LENGKAP + LED</td>
