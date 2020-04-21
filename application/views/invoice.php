@@ -5,15 +5,15 @@
 	<title>ceklab - Invoice</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="assets/css/invoice.css"> 
-        <script type="text/javascript" src="assets/script/invoice.js"></script>   
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/invoice.css');?>"> 
+        <script type="text/javascript" src="<?php echo base_url('assets/script/invoice.js');?>"></script>   
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-        <script type="text/javascript" src="assets/script/jquery.js"></script>
-        <script type="text/javascript" src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="assets/script/popper.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css');?>">
+        <script type="text/javascript" src="<?php echo base_url('assets/script/jquery.js');?>"></script>
+        <script type="text/javascript" src="<? echo base_url('assets/vendor/bootstrap/js/bootstrap.min.js');?>"></script>
+        <script type="text/javascript" src="<? echo base_url('assets/script/popper.js');?>"></script>
+        <script src="<?php echo base_url('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js');?>"></script>
+        <script src="<?php echo base_url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js');?>"></script>
 </head>
 <body>
 	<div class="col-xl-12">
@@ -30,25 +30,25 @@
 			    				<div class="card-deck">
 			                		<div class="card bg-plain border-0">
 			                    		<div class="card-body text-left">
-			                        		<p class="card-text"><strong>Kode       :</strong> F12MJ</p>
-			                        		<p class="card-text"><strong>Tanggal    :</strong> 02 Apr 20</p>
-			                        		<p class="card-text"><strong>Paket      :</strong> Screening COVID-19</p>
+			                        		<p class="card-text"><strong>Kode       :</strong> <?php echo $hasil[0]['kode_transaksi'];?></p>
+			                        		<p class="card-text"><strong>Tanggal    :</strong> <?php echo $hasil[0]['tanggal'];?></p>
+			                        		<p class="card-text"><strong>Paket      :</strong> <?php echo $hasil[0]['paket_periksa_id'];?></p>
 			                    		</div>
 			                		</div>
 			                		<div class="card bg-plain border-0">
 			                    		<div class="card-body text-left">
-			                        		<p class="card-text"><strong>Pasien         :</strong> </p>
-			                        		<p class="card-text"><strong>Umur           :</strong> </p>
-			                         		<p class="card-text"><strong>JK            :</strong> L </p>
-			                          		<p class="card-text"><strong>No. Telepon  :</strong> </p>
+			                        		<p class="card-text"><strong>Pasien         :</strong> <?php echo $hasil[0]['pasien'];?> </p>
+			                        		<p class="card-text"><strong>Umur           :</strong> <?php echo $hasil[0]['umur'];?></p>
+			                         		<p class="card-text"><strong>JK            :</strong> <?php echo $hasil[0]['gender'];?></p>
+			                          		<p class="card-text"><strong>No. Telepon  :</strong> <?php echo $hasil[0]['phone_number'];?></p>
 			                    		</div>
 			                		</div>
 			                		<div class="card bg-plain border-0">
 			                    		<div class="card-body text-left">
-			                        		<p class="card-text"><strong>Lab            :</strong> Prospek Lab</p>
-			                         		<p class="card-text"><strong>Kota          :</strong> JAKARTA</p>
-			                          		<p class="card-text"><strong>Pemesan      :</strong> Alif Farhan Widyanto</p>
-			                           		<p class="card-text"><strong>Keterangan  :</strong></p>
+			                        		<p class="card-text"><strong>Lab            :</strong> <?php echo $hasil[0]['vendor_id'];?></p>
+			                         		<p class="card-text"><strong>Kota          :</strong> <?php echo $hasil[0]['kota_id'];?></p>
+			                          		<p class="card-text"><strong>Pemesan      :</strong> <?php echo $hasil[0]['username'];?></p>
+			                           		<p class="card-text"><strong>Keterangan  :</strong> <?php echo $hasil[0]['keterangan'];?></p>
 
 			                    		</div>
 			                		</div>
@@ -87,6 +87,13 @@
 			    							</thead>
 			    							<tbody>
 			    								<!-- foreach ($order->lineItems as $line) or some such thing here -->
+
+			    								<?php 
+			    									$i = 1;
+			    									/*foreach ($transaksi as $data) {
+			    										# code...
+			    									}*/
+			    								?>
 			    								<tr>
 			    									<td>1</td>
 			    									<td class="text-center">DARAH LENGKAP + LED</td>
