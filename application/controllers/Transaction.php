@@ -9,9 +9,9 @@
 
 
 		public function index(){
-			//$kode_transaksi = $this->session->userdata('kode_transaksi');
-			$data['hasil'] = $this->Transaksi_model->getTransactions(1);
-			//var_dump($data);
+			$kode_transaksi = $this->session->userdata('kode_transaksi');
+			$data['hasil'] = $this->Transaksi_model->getTransactions($kode_transaksi);
+			
 			$this->load->view('invoice', $data);
 		}
 	}

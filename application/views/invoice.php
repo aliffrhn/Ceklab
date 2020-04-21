@@ -16,6 +16,7 @@
         <script src="<?php echo base_url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js');?>"></script>
 </head>
 <body>
+	<?php var ?>
 	<div class="col-xl-12">
 		<div class="row">
 	  		<div class="col-md-8">
