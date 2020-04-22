@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="m-3">
+    <div class="container-fluid m-3">
         <form action="<?php echo base_url() . 'index.php/AdminController/updateProfile/' ?>" method="post">
             <div class="form-group">
                 <input type="hidden" value="<?php echo $profile['username'] ?>" class="form-control" name="username"></input>
@@ -28,6 +28,8 @@
                 <input type="text" value="<?php echo $profile['kota'] ?>" class="form-control" name="kota"></input>
                 <label for="password">Password</label>
                 <input type="text" value="<?php echo $profile['password'] ?>" class="form-control" name="password"></input>
+                <label for="role">Password</label>
+                <input type="text" value="<?php echo $profile['role'] ?>" class="form-control" name="role"></input>
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>

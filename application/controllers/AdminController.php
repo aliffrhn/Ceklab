@@ -91,12 +91,14 @@ class AdminController extends CI_Controller{
         $phone = $this->input->post('phone');
         $kota = $this->input->post('kota');
         $pass = $this->input->post('password');
+        $role = $this->input->post('role');
         $data = array(
             'nama' => $name,
             'email' => $email,
             'phone_number' => $phone,
             'kota' => $kota,
-            'password' => $pass
+            'password' => $pass,
+            'role' => $role
         );
         $res = $this->M_admin->updateProfile($username,$data);
         if ($res) {
