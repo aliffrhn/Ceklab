@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Cek Resiko <?php echo $nmPenyakit[0]['nama_penyakit'] ?></title>
+        <title>Cek Resiko COVID-19</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/cekresikocov19.css'); ?>">   
