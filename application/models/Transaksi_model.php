@@ -3,21 +3,23 @@
 
 		public function getTransactions($kode_transaksi) {
 
-			$query = "SELECT * FROM transaksi JOIN paket_periksa USING paket_periksa_id JOIN pemeriksaan USING pemeriksaan_id WHERE kode_transaksi = '$kode_transaksi'";
-			/*$this->db->select ( '*' ); 
+			/*$query = "SELECT * FROM transaksi JOIN paket_periksa USING paket_periksa_id JOIN pemeriksaan USING pemeriksaan_id WHERE kode_transaksi = '$kode_transaksi'";*/
+			$this->db->select ( '*' ); 
 		    $this->db->from ( 'transaksi' );
+		    $this->db->join('pasien', 'pasien.id_pasien = transaksi.id_pasien');
 		    $this->db->join ( 'paket_periksa', 'paket_periksa.paket_periksa_id = transaksi.paket_periksa_id');
 		    $this->db->join ( 'pemeriksaan', 'pemeriksaan.pemeriksaan_id = paket_periksa.pemeriksaan_id');
+		    $this->db->join ('vendor_lab', 'vendor_lab.vendor_id = paket_periksa.vendor_id');
+		    $this->db->join ('kota', 'kota.kota_id = paket_periksa.kota_id');
 		    $this->db->where ( 'transaksi.kode_transaksi', $kode_transaksi);
-		    $query = $this->db->get();*/
-		    $baca = $this->db->query($query)->result_array();
+		    $query = $this->db->get();
+		    return $query->row_array();
+		    /*$baca = $this->db->query($query)->result_array();*/
 		    //var_dump($query[0]);
 			//ßreturn $query->result_array();
 
-			var_dump('laper');
-
+			//var_dump($baca[0]);
 			
-		
 		}
 
 		public function insertTransaction($pasien_id, $paket_periksa_id){
@@ -32,13 +34,12 @@
 				'status_id' =>$status_id,
 				'paket_periksa_id'=>$paket_periksa_id,
 				'id_pasien'=>$pasien_id
-
-
-
 			);
-			var_dump($data);
+			//var_dump($data);
 			$this->db->insert('transaksi', $data);
-			
+
+			$idTransaksi = $this->db->insert_id();
+			return $idTransaksi;	
 
 		}
 

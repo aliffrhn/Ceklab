@@ -30,25 +30,25 @@
 			    				<div class="card-deck">
 			                		<div class="card bg-plain border-0">
 			                    		<div class="card-body text-left">
-			                        		<p class="card-text"><strong>Kode       :</strong> <?php echo $hasil[0]['kode_transaksi'];?></p>
-			                        		<p class="card-text"><strong>Tanggal    :</strong> <?php echo $hasil[0]['tanggal'];?></p>
-			                        		<p class="card-text"><strong>Paket      :</strong> <?php echo $hasil[0]['paket_periksa_id'];?></p>
+			                        		<p class="card-text"><strong>Kode       :</strong> <?php echo $hasil['kode_transaksi']; ?></p>
+			                        		<p class="card-text"><strong>Tanggal    :</strong> <?php echo $hasil['tanggal']; ?></p>
+			                        		<p class="card-text"><strong>Paket      :</strong> <?php echo $hasil['judul']; ?></p>
 			                    		</div>
 			                		</div>
 			                		<div class="card bg-plain border-0">
 			                    		<div class="card-body text-left">
-			                        		<p class="card-text"><strong>Pasien         :</strong> <?php echo $hasil[0]['pasien'];?> </p>
-			                        		<p class="card-text"><strong>Umur           :</strong> <?php echo $hasil[0]['umur'];?></p>
-			                         		<p class="card-text"><strong>JK            :</strong> <?php echo $hasil[0]['gender'];?></p>
-			                          		<p class="card-text"><strong>No. Telepon  :</strong> <?php echo $hasil[0]['phone_number'];?></p>
+			                        		<p class="card-text"><strong>Pasien         :</strong> <?php echo $hasil['pasien']; ?> </p>
+			                        		<p class="card-text"><strong>Umur           :</strong> <?php echo $hasil['umur']; ?></p>
+			                         		<p class="card-text"><strong>JK            :</strong> <?php echo $hasil['gender']; ?></p>
+			                          		<p class="card-text"><strong>No. Telepon  :</strong> <?php echo $hasil['phone_number']; ?></p>
 			                    		</div>
 			                		</div>
 			                		<div class="card bg-plain border-0">
 			                    		<div class="card-body text-left">
-			                        		<p class="card-text"><strong>Lab            :</strong> <?php echo $hasil[0]['vendor_id'];?></p>
-			                         		<p class="card-text"><strong>Kota          :</strong> <?php echo $hasil[0]['kota_id'];?></p>
-			                          		<p class="card-text"><strong>Pemesan      :</strong> <?php echo $hasil[0]['username'];?></p>
-			                           		<p class="card-text"><strong>Keterangan  :</strong> <?php echo $hasil[0]['keterangan'];?></p>
+			                        		<p class="card-text"><strong>Lab            :</strong> <?php echo $hasil['nama_vendor']; ?></p>
+			                         		<p class="card-text"><strong>Kota          :</strong> <?php echo $hasil['nama_kota']; ?></p>
+			                          		<p class="card-text"><strong>Pemesan      :</strong> <?php echo $hasil['username']; ?></p>
+			                           		<p class="card-text"><strong>Keterangan  :</strong> <?php echo $hasil['keterangan']; ?></p>
 
 			                    		</div>
 			                		</div>
@@ -134,7 +134,7 @@
 		  				<div class="file-upload">
 
 		  					<?php /*echo $error*/;?>
-	  						<?php /*echo form_open_multipart('C_Upload/do_upload');?>
+	  						<?php /*echo form_open_multipart('C_Upload/do_upload');*/?>
 
 				  			<div class="panel-heading">
 				  				<h5 class="panel-title"><strong>PEMBAYARAN</strong></h5>
