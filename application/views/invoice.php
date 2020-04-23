@@ -133,22 +133,27 @@
 		  			<div class="panel panel-default panel-pembayaran">
 		  				<div class="file-upload">
 
-		  					<?php /*echo $error*/;?>
-	  						<?php /*echo form_open_multipart('C_Upload/do_upload');*/?>
-
+		  					
 				  			<div class="panel-heading">
 				  				<h5 class="panel-title"><strong>PEMBAYARAN</strong></h5>
 						    	<div></div>	
 				  			</div>
 				  			<div class="panel-body">
 				            	<p>File :</p>
-				            	<p><button type="file" class="btn btn-secondary" name="userfile">Choose File</button>  No file chosen</p>
+
+				            	<?php
+						        echo form_open_multipart('upload/do_upload');
+						        ?>
+
+				            	<?php echo form_input(['name' => 'userfile','type' => 'file', 'id' => 'filegambar']) ?>
 				            	<p>Kirimkan bukti pembayaran ke :</p>
 				            	<p>09128374659 (BCA) An. PT Mediva Digital Inovasi</p>
 				  			</div>
 				  			<div class="panel-footer">
-				  				<button type="submit" class="btn btn-primary btn-center btn-block" id="upload">Upload</button>
+				  				<!-- <button type="submit" class="btn btn-primary btn-center btn-block" id="upload">Upload</button> -->
+				  				<?php echo form_submit('submit','Upload',['class' =>'btn btn-primary btn-center btn-block']) ?>
 				  			</div>
+				  			 <?php echo form_close(); ?>
 				  		</div>
 		  		    </div>
 		  		</div>

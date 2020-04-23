@@ -36,12 +36,11 @@
 
 		}
 
-		/*public function do_upload()
-        {
+		public function do_upload(){
                
                 $config['upload_path']          = './uploads/' ;//isi dengan nama folder temoat menyimpan gambar
-                $config['allowed_types']        =  'gif|jpg|png';//isi dengan format/tipe gambar yang diterima
-                $config['max_size']             =  100;//isi dengan ukuran maksimum yang bisa di upload
+                $config['allowed_types']        =  'jpeg|jpg|png';//isi dengan format/tipe gambar yang diterima
+                $config['max_size']             =  2048;//isi dengan ukuran maksimum yang bisa di upload
                 $config['max_width']            =  1024;//isi dengan lebar maksimum gambar yang bisa di upload
                 $config['max_height']           = 768;//isi dengan panjang maksimum gambar yang bisa di upload
 
@@ -55,12 +54,14 @@
                 }
                 else
                 {
-                        $data = array('upload_data' => $this->upload->data());
+                        $data = array('image' => $this->upload->data());
 			           
                 }
+                $image = $this->db->insert('transaksi', $data);
+                return $image;
         }
 
-        }*/
+        
 
         /*public function save($upload){
 

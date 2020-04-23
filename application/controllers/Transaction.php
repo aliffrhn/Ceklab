@@ -16,6 +16,17 @@
 			$this->load->view('invoice', $data);
 		}
 
+
+		public function uploadImg(){
+			$data['hasil'] = $this->Transaksi_model->do_upload();
+
+			if($this->input->post('submit')){
+				 $this->db->insert('transaksi', $data);
+			}
+
+			$this->load->view('invoice', $data);
+		}
+
 		
 
 	}
