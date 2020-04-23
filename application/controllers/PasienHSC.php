@@ -13,9 +13,11 @@
 				$this->load->helper('form');
 			}
 			
-			public function index()
+			public function index($paket_periksa_id)
 			{
-				$this->load->view('pasien_HS');
+				$data = [];
+				$data['paket_periksa_id'] = $paket_periksa_id;
+				$this->load->view('pasien_HS', $data);
 			}
 			
 			public function form_pasien(){
@@ -27,6 +29,8 @@
 				$tanggal = $this->input->post('tanggal', true);
 				$waktu = $this->input->post('waktu', true);
 				$keterangan = $this->input->post('keterangan', true);
+				$paket_periksa_id = $this->input->post('periksaId', true);
+
 
 				$data = [
 						'gender' => $this->input->post('gender', true),
@@ -40,14 +44,11 @@
 					];
 
 				//var_dump($data);
-				$insert = $this->PasienHSM->insert_new_pasien($data);
-				if ($insert == true) {
-					redirect('/Transaction/index');
-				}else{
-					redirect('/Pasien_HS');
-				}
-	
+				$pasien_id = $this->PasienHSM->insert_new_pasien($data);
+				var_dump($pasien_id);
+				redirect('/Transaction/index/'.$pasien_id .'/'.$paket_periksa_id);
 				echo "Data Added!";
 			}
+
 	}
 ?>

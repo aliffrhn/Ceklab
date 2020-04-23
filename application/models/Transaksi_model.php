@@ -3,36 +3,83 @@
 
 		public function getTransactions($kode_transaksi) {
 
-			//$kode_transaksi = $this->session->userdata('kode_transaksi');
-			//$sql = "select * from transaksi where kode_transaksi= ?"
-			//var_dump($kode_transaksi);
-			//$query = $this->db->query('select * from transaksi where kode_transaksi='.$kode_transaksi);
-			$query = "SELECT * FROM transaksi WHERE kode_transaksi = '$kode_transaksi'";
-			$baca = $this->db->query($query)->result_array();
-			//var_dump($baca[0]['kode_transaksi']);
+			$query = "SELECT * FROM transaksi JOIN paket_periksa USING paket_periksa_id JOIN pemeriksaan USING pemeriksaan_id WHERE kode_transaksi = '$kode_transaksi'";
+			/*$this->db->select ( '*' ); 
+		    $this->db->from ( 'transaksi' );
+		    $this->db->join ( 'paket_periksa', 'paket_periksa.paket_periksa_id = transaksi.paket_periksa_id');
+		    $this->db->join ( 'pemeriksaan', 'pemeriksaan.pemeriksaan_id = paket_periksa.pemeriksaan_id');
+		    $this->db->where ( 'transaksi.kode_transaksi', $kode_transaksi);
+		    $query = $this->db->get();*/
+		    $baca = $this->db->query($query)->result_array();
+		    //var_dump($query[0]);
+			//ßreturn $query->result_array();
 
-			if(count($baca[0]) > 0){
-        		foreach ($baca as $data){
-            		$hasil[] = array(
-		                'kode_transaksi'=>$data['kode_transaksi'],
-		                'tanggal'=>$data['tanggal'],
-		                'paket_periksa_id'=>$data['paket_periksa_id'],
-		                'pasien'=>$data['pasien'],
-		                'umur'=>$data['umur'],
-		                'gender'=>$data['gender'],
-		                'phone_number'=>$data['phone_number'],
-		                'vendor_id'=>$data['vendor_id'],
-		                'kota_id'=>$data['kota_id'],
-		                'username'=>$data['username'],
-		                //'pemeriksaan_id'=>$data->status,
-		                'keterangan'=>$data['keterangan'],
-		                //'status_id'=>$data->status_id,
-            		);
-        		}
-        		return($hasil);
-			}else{
-				return false;
-			}
+			var_dump('laper');
+
+			
+		
 		}
+
+		public function insertTransaction($pasien_id, $paket_periksa_id){
+			$username = 'test'/*$this->session->userdata('username')*/;
+			$status_id = 2;
+			$tanggal = date('d-m-y');
+
+
+			$data = array (
+				'username'=>$username,
+				'tanggal'=>$tanggal,
+				'status_id' =>$status_id,
+				'paket_periksa_id'=>$paket_periksa_id,
+				'id_pasien'=>$pasien_id
+
+
+
+			);
+			var_dump($data);
+			$this->db->insert('transaksi', $data);
+			
+
+		}
+
+		/*public function do_upload()
+        {
+               
+                $config['upload_path']          = './uploads/' ;//isi dengan nama folder temoat menyimpan gambar
+                $config['allowed_types']        =  'gif|jpg|png';//isi dengan format/tipe gambar yang diterima
+                $config['max_size']             =  100;//isi dengan ukuran maksimum yang bisa di upload
+                $config['max_width']            =  1024;//isi dengan lebar maksimum gambar yang bisa di upload
+                $config['max_height']           = 768;//isi dengan panjang maksimum gambar yang bisa di upload
+
+                $this->load->library('upload', $config);
+
+                //lengkapi kondisi berikut
+                if ( ! $this->upload->do_upload('userfile'))
+                {
+                        $error = array('error' => $this->upload->display_errors());
+			            
+                }
+                else
+                {
+                        $data = array('upload_data' => $this->upload->data());
+			           
+                }
+        }
+
+        }*/
+
+        /*public function save($upload){
+
+		    $data = array(
+		      'deskripsi'=>$this->input->post('input_deskripsi'),
+		      'nama_file' => $upload['file']['file_name'],
+		      'ukuran_file' => $upload['file']['file_size'],
+		      'tipe_file' => $upload['file']['file_type']
+		    );
+	    
+	    	$this->db->insert('transaksi', $data);
+	  }*/
+
+
 	}
 ?>

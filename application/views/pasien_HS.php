@@ -79,6 +79,9 @@
 						</div>
 					</div>
 					<div class="form-group">
+						  <input type="hidden" id="periksaId" name="periksaId" value="<?php echo $paket_periksa_id ?>">
+					</div>
+					<div class="form-group">
 						<div class="col-md-12">
 							<button type="submit" class="btn btn-primary">Pesan</button>
 						</div>

@@ -16,7 +16,6 @@
         <script src="<?php echo base_url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js');?>"></script>
 </head>
 <body>
-	<?php var ?>
 	<div class="col-xl-12">
 		<div class="row">
 	  		<div class="col-md-8">
@@ -89,29 +88,30 @@
 			    							<tbody>
 			    								<!-- foreach ($order->lineItems as $line) or some such thing here -->
 
-			    								<?php 
-			    									$i = 1;
-			    									/*foreach ($transaksi as $data) {
-			    										# code...
-			    									}*/
-			    								?>
-			    								<tr>
-			    									<td>1</td>
-			    									<td class="text-center">DARAH LENGKAP + LED</td>
-			    									<td class="text-center"> </td>
-			    								
-			    								</tr>
-			                                	<tr>
-			        								<td>2</td>
-			    									<td class="text-center">THORAX PA</td>
-			    									<td class="text-center"> </td>
-			    								
-			    								</tr>
-			                                	<tr>
-			            							<td> </td>
-			    									<td class="text-center"><strong>Total</strong></td>
-			    									<td class="text-center"><strong>Rp 448.000</strong></td>
-			    								</tr>
+				    								<?php 
+				    									/*$i = 1;
+				    									foreach ($transaksi as $data) {}
+				    									
+				    									print_r (explode("|",$hasil[0]['nama_pemeriksaan']));
+				    									var_dump($hasil);*/
+				    								?>
+					    							<tr>
+					    								<td>1</td>
+					    								<td class="text-center">DARAH LENGKAP + LED</td>
+					    								<td class="text-center"> </td>
+					    								
+					    							</tr>
+					                                <tr>
+					        							<td>2</td>
+					    								<td class="text-center">THORAX PA</td>
+					    								<td class="text-center"> </td>
+					    								
+					    							</tr>
+					                                <tr>
+					            						<td> </td>
+					    								<td class="text-center"><strong>Total</strong></td>
+					    								<td class="text-center"><strong>Rp 448.000</strong></td>
+					    							</tr>
 			    							</tbody>
 			    						</table>
 			    					</div>
@@ -131,20 +131,26 @@
 	  		<div class="col-md-4">
 	  			<div class="container-sm mt-3 border">
 		  			<div class="panel panel-default panel-pembayaran">
-		  				<div class="panel-heading">
-		  					<h5 class="panel-title"><strong>PEMBAYARAN</strong></h5>
-				    		<div></div>	
-		  				</div>
-		  				<div class="panel-body">
-		            		<p>File :</p>
-		            		<p><button type="button" class="btn btn-secondary">Choose File</button>  No file chosen</p>
-		            		<p>Kirimkan bukti pembayaran ke :</p>
-		            		<p>09128374659 (BCA) An. PT Mediva Digital Inovasi</p>
-		  				</div>
-		  				<div class="panel-footer">
-		  					<button type="button" class="btn btn-primary btn-center btn-block" id="upload">Upload</button>
-		  				</div>
-		  			</div>
+		  				<div class="file-upload">
+
+		  					<?php /*echo $error*/;?>
+	  						<?php /*echo form_open_multipart('C_Upload/do_upload');?>
+
+				  			<div class="panel-heading">
+				  				<h5 class="panel-title"><strong>PEMBAYARAN</strong></h5>
+						    	<div></div>	
+				  			</div>
+				  			<div class="panel-body">
+				            	<p>File :</p>
+				            	<p><button type="file" class="btn btn-secondary" name="userfile">Choose File</button>  No file chosen</p>
+				            	<p>Kirimkan bukti pembayaran ke :</p>
+				            	<p>09128374659 (BCA) An. PT Mediva Digital Inovasi</p>
+				  			</div>
+				  			<div class="panel-footer">
+				  				<button type="submit" class="btn btn-primary btn-center btn-block" id="upload">Upload</button>
+				  			</div>
+				  		</div>
+		  		    </div>
 		  		</div>
 	  		</div>
 		</div>

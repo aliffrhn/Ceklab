@@ -24,12 +24,10 @@
 		} */
 
 		public function insert_new_pasien($data){
-		$query = $this->db->insert('pasien',$data);
-			if($query){
-				return true;
-			} else {
-				return false;
-			}
+			$query = $this->db->insert('pasien',$data);
+			$insert_id = $this->db->insert_id();
+		
+			return ($insert_id);
 			//var_dump($data);
 		}
 		

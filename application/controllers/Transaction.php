@@ -5,14 +5,18 @@
             parent::__construct();
             $this->load->model('Transaksi_model');
             $this->load->library('session');
+            $this->load->helper(array('form', 'url'));
         }
 
 
-		public function index(){
-			$kode_transaksi = $this->session->userdata('kode_transaksi');
-			$data['hasil'] = $this->Transaksi_model->getTransactions($kode_transaksi);
-			
+		public function index($pasien_id, $paket_periksa_id){
+			$insert_transaction = $this->Transaksi_model->insertTransaction($pasien_id, $paket_periksa_id);
+			$data['hasil'] = $this->Transaksi_model->getTransactions($insert_transaction);
+
 			$this->load->view('invoice', $data);
 		}
+
+		
+
 	}
 ?>
