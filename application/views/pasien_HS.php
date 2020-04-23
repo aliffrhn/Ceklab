@@ -48,14 +48,7 @@
 						 	<input type="noTelp" class="form-control" id="noTelp" placeholder="No. Telepon / Hp" name="phone_number">
 						</div>
 					</div>
-					<div class="form-group">
-						<div class="col-md-12">
-							<div class="btn-group btn-block">
-    							<button type="button" class="btn btn-success">Home Service</button>
-    							<button type="button" class="btn btn-outline-success">Tidak</button>
-  							</div>
-  						</div>
-					</div>
+					
 					<div class="form-group">
 						<div class="col-md-12">
 						 	<input type="alamat" class="form-control" id="alamat" placeholder="Alamat" name="alamat">

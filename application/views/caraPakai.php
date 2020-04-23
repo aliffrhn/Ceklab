@@ -4,15 +4,15 @@
         <title>ceklab - Cara Pakai</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="assets/css/caraPakai.css"> 
-        <script type="text/javascript" src="assets/script/caraPakai.js"></script>   
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/caraPakai.css');?>"> 
+        <script type="text/javascript" src="<?php echo base_url('assets/script/caraPakai.js');?>"></script>   
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-        <script type="text/javascript" src="assets/script/jquery.js"></script>
-        <script type="text/javascript" src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="assets/script/popper.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css');?>">
+        <script type="text/javascript" src="<?php echo base_url('assets/script/jquery.js');?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.min.js');?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/script/popper.js');?>"></script>
+        <script src="<?php echo base_url('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js');?>"></script>
+        <script src="<?php echo base_url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js');?>"></script>
 </head>
 <body>
 <!-- Page Content -->
@@ -32,7 +32,7 @@
 
                 </div>
                 <div class="col-6 col-sm-4" id="col1">
-                        <img src="assets/picture/asset-1.jpeg" class="center float-left img1" alt="WhatsApp" width="500" height="350">
+                        <img src="<?php echo base_url('assets/Picture/asset-1.jpeg');?>" class="center float-left img1" alt="WhatsApp" width="500" height="350">
                 </div>
                 <div class="col-6 col-sm-2" id="col1"></div>
             </div>
@@ -45,7 +45,7 @@
                 </svg>
                 <div class="col-6 col-sm-2" id="col2"></div>
                 <div class="col-6 col-sm-4" id="col2">
-                        <img src="assets/picture/asset-2.jpeg" class="center float-right img2" alt="Pesan" width="500" height="350">
+                        <img src="<?php echo base_url('assets/Picture/asset-2.jpeg');?>" class="center float-right img2" alt="Pesan" width="500" height="350">
                 </div>
                 <div class="col-6 col-sm-4" id="col2">
                         <h6>Pesan Langsung Lewat Web</h6>
@@ -70,7 +70,7 @@
                         <button type="button" class="btn btn-light">Download Sekarang</button>
                 </div>
                 <div class="col-6 col-sm-4" id="col3">
-                        <img src="assets/picture/asset-3.jpg" class="center float-left img3" alt="Download" width="500" height="350">
+                        <img src="<?php echo base_url('assets/Picture/asset-3.jpg');?>" class="center float-left img3" alt="Download" width="500" height="350">
                 </div>
                 <div class="col-6 col-sm-2" id="col3"></div>
            </div>

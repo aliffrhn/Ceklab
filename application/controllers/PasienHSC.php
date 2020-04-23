@@ -43,7 +43,6 @@
 						'keterangan' => $this->input->post('keterangan', true)
 					];
 
-				//var_dump($data);
 				$pasien_id = $this->PasienHSM->insert_new_pasien($data);
 				var_dump($pasien_id);
 				redirect('/Transaction/index/'.$pasien_id .'/'.$paket_periksa_id);

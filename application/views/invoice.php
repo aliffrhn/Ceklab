@@ -24,7 +24,7 @@
 	  					<div class="row">
 			  				<div class="col-xs-12">
 			  					<div class="invoice-title">
-			    					<img src="assets/picture/asset-0.png" class="center float-left img1" alt="ceklab">
+			    					<img src="<?php echo base_url('assets/Picture/asset-0.png');?>" class="center float-left img1" alt="ceklab">
 			    				</div>
 			    				<hr>
 			    				<div class="card-deck">
