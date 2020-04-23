@@ -1,12 +1,12 @@
 <html>
     <head>
-        <link rel="stylesheet" href="dist/css/bootstrap.min.css" >
-        <script src="dist/js/bootstrap.min.js" ></script>
-    
-
+        <link rel="stylesheet" href="<?php echo base_url().'assets/dist/css/bootstrap.min.css' ?>" >
+        <script src="<?php echo base_url().'assets/dist/js/bootstrap.min.js' ?>" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js" integrity="sha256-Ikk5myJowmDQaYVCUD0Wr+vIDkN8hGI58SGWdE671A8=" crossorigin="anonymous"></script>
         <style>
             .countdown {
-              font-size: 30px;
+              font-size: 40px;
               margin-top: 0px;
             }
         </style>
@@ -80,23 +80,30 @@
              </div>
        </div>
         
+       <?php 
+        foreach($data as $value){
+
+        
+       ?>
        <div id="jumbotron">
             <div class="container" style="margin-top: 120px;">
                 <div class="row">
                     <div class="col col-md-6">
-                        <img src="assets/med.jpeg" alt="" style="width: 350px; height: 400px;">
+                        <img src="<?php echo $value['photo_url']?>" alt="" style="width: 350px; height: 400px;">
                         <h3 style="margin-top:25px;">Pendaftaran Ditutup Pada :</h3>
-                        <p id="demo" class="countdown"></p>
+                        <div id="<?php echo $value['pendaftaran_id'] ?>" data-countdown="<?php echo $value['waktu_penutupan'] ?>" class="countdown">
+                        </div>
                     </div>
                     <div class="col col-md-6">
-                        <h3>Mulai Hidup sehat? Ikut CekLab di Semarang Sekarang</h3>
+                        <h3>Mulai Hidup sehat? Ikut CekLab di <?php echo $value['nama_kota'] ?> Sekarang</h3>
+                        <form action="<?php echo base_url().'index.php/User/insert' ?>" method="post">
                         <div class="form-group">
                             <label for="usr">Nama:</label>
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" class="form-control" id="usr" name="nama">
                           </div>
                           <div class="form-group">
                             <label for="umr">Umur</label>
-                            <input type="text" class="form-control" id="umr">
+                            <input type="text" class="form-control" id="umr" name="umur">
                           </div>
                           <div class="form-check-inline">
                             <label class="form-check-label">
@@ -109,19 +116,22 @@
                             </label>
                           </div>
                           <div class="form-group" style="margin-top: 20px;">
-                            <label for="usr">Alamat:</label>
-                            <input type="text" class="form-control" id="usr">
+                            <label for="alamat">Alamat:</label>
+                            <input type="text" class="form-control" id="alamat" name="alamat">
                           </div>
                           <div class="form-group">
-                            <label for="umr">Nomor Telephone Whatsapp</label>
-                            <input type="text" class="form-control" id="umr">
+                            <label for="telp">Nomor Telephone Whatsapp</label>
+                            <input type="text" class="form-control" id="telp" name="telp">
                           </div>
                           <button class="btn btn-primary" style="background-color: #2D9CDB;">Send</button>
-                    </div>
+                          </form>
+                        </div>
                 </div>
             </div>
        </div>
-
+       <?php }
+       ?>
+       
        <div id="jumbotron" style="margin-top: 120px;">
             <div class="container">
                 <div class="row">
@@ -141,35 +151,53 @@
             </div>
        </div>
 
+       <div id="-page-footer font-small dark" style="background-color:#1b252f;">
+            <div class="container">
+                <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+                    <center style="">
+                        <h2 style="color: white;">ceklab</h2>
+                        <p style="color: white; margin-top: 25px;">Ucapkan selamat tinggal bagi periksa darah yang membingungkan <br> dan mahal. <br> Periksa lab,ingat Ceklab.id!</p>
+                    </center>
+                </div>
+
+                <div class="ul">
+                    <div class="li">
+                        <center>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row d-flex justify-content-center">
+                                        <img src="assets/bx-phone.svg" alt="" style="color: white; margin-right: 10px; margin-bottom: 10px;">
+                                        <p style="color :white">+62 813-5351-8888</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex justify-content-center">
+                                        <img src="assets/bx-map.svg" alt="" style="color: white; margin-right: 10px; margin-bottom: 10px;">
+                                        <p style="color :white">Jalan Tais Nasution no 41, Surabaya</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex justify-content-center">
+                                        <img src="assets/bx-time.svg" alt="" style="color: white; margin-right: 10px; margin-bottom: 10px;">
+                                        <p style="color :white">08.00 - 21.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p style="text-align: center; color: white; font-weight: 100; font-size: small; margin-bottom: auto;">2019 All Rights Reserved By PT Mediva Digital Inovasi</p><br>
+                        </center>
+                    </div>
+                </div>
+            </div>
+       </div>
        <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
-        
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-        
-          // Get today's date and time
-          var now = new Date().getTime();
-            
-          // Find the distance between now and the count down date
-          var distance = countDownDate - now;
-            
-          // Time calculations for days, hours, minutes and seconds
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-          // Output the result in an element with id="demo"
-          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-          + minutes + "m " + seconds + "s ";
-            
-          // If the count down is over, write some text 
-          if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
-          }
-        }, 1000);
+        $(function(){
+        $('[data-countdown]').each(function() {
+            var $this = $(this), finalDate = $(this).data('countdown');
+        $this.countdown(finalDate, function(event) {
+        $this.html(event.strftime('%Dd %Hh %Mm %Ss'));
+                });
+            });
+        });
         </script>
     </body>
 </html>
