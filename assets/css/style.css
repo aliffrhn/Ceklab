@@ -1,0 +1,116 @@
+.bg-index{
+    background-color: #f1f4f6;
+}
+
+.box {
+    width: 64px;
+    height: 64px;
+    box-shadow: -1px 3px 26px -5px rgba(0, 0, 0, 0.2);
+}
+
+ion-icon {
+    text-align: center;
+    font-size: 32px;
+    color: plum;
+}
+
+.shadow{
+    box-shadow: 12px 13px 46px -5px rgba(0,0,0,0.35);
+}
+
+.nav-link{
+    color: rgb(119, 119, 119);
+    overflow: hidden;
+    position: relative;
+    transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    transition: .2s;
+}
+
+.nav-link:hover{
+    color: white;
+    background-color: #3f6ad8;
+    box-shadow: 12px 13px 46px -5px rgba(0,0,0,0.35);
+}
+
+.selected{
+    background-color: #3f6ad8;
+    color: white;
+}
+
+/* .nav-link:hover{
+    background-color: #3f6ad8;
+    color: white;
+    box-shadow: 12px 13px 46px -5px rgba(0,0,0,0.35);
+} */
+
+.bg-top {
+    align-content: center;
+    background-color: #fafbfc;
+}
+
+.title-bar,.subtitle-bar{
+    color: grey;
+}
+
+.shadow-card{
+    text-decoration: none;
+    box-shadow: 4px 5px 19px -1px rgba(0,0,0,0.15);
+}
+
+.btn-info{
+    color: white;
+    background-color: #16aaff;
+}
+
+.btn-glow{
+    color: white;
+    background-color: #16aaff;
+    box-shadow: 0px 4px 17px -2px rgba(36, 95, 255, 0.5);
+    border-color: #16aaff;
+}
+
+.btn-glow:hover{
+    background-color: #319fdf;
+}
+
+.image-check{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 20%;
+    margin: 0px;
+    filter: opacity(0.5) grayscale(100%);
+}
+
+.image-check-2{
+    background-image: url('https://temandokter.com/assets/image/lab/943aa264345b71345706270dd0fc59db.png');
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+    /* padding: 15%; */
+    margin: 0px;
+    margin-bottom: 0px;
+    /* filter: opacity(0.7) grayscale(70%); */
+}
+
+.overlays{
+    background-color:rgb(32, 27, 58);
+}
+
+.card{
+    color: rgb(70, 70, 70);
+    background-color: white;
+}
+
+.card-header,.card-footer{
+    background-color: white !important;
+}
+
+.card-data{
+    text-align: center;
+    color: white;
+    padding: 20px;
+    backdrop-filter: grayscale(70%) opacity(0.3);
+}
+
+/* * {
+    border: 1px solid red;
+} */
