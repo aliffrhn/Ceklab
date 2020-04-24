@@ -7,6 +7,9 @@
             $this->load->model('Kota_model');
             $this->load->model('Vendor_model');
             $this->load->model('Status_model');
+            if(!$this->session->userdata('username')){
+                redirect('Login/index');
+            }
         }
 
         public function index(){

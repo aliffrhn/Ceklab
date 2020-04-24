@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Ceklabregis extends CI_Controller {
+class Register extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
@@ -13,7 +13,7 @@ class Ceklabregis extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('Ceklab Register');
+		$this->load->view('Register/register');
 	}
 	
 	public function register(){
@@ -33,13 +33,14 @@ class Ceklabregis extends CI_Controller {
 						'phone_number' => $this->input->post('phone_number', true),
 						'kota' => $this->input->post('kota', true)
 					];
+
 				$insert = $this->Profile_model->insert_new_profile($data);
-				$this->session->set_userdata($username);
-				redirect('/ceklablogin');
-				echo "data added!";
-		} else {
+				$this->session->set_userdata('username', $username);
+
+				$this->load->view('Dashboard/dashboard');
+		}else {
 			$data['error_message'] = "Username telah digunakan";
-			$this->load->view('Ceklab Register', $data);
+			$this->load->view('Register/register', $data);
 		}
 	}
 }

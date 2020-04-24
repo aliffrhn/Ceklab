@@ -83,10 +83,10 @@
                             Selamat datang kembali, yuk login dulu.	
                             </span>
                         </h4>
-                        <h6 class="mt-3 quest">Belum ada akun? <a href="<?php echo base_url('/Ceklabregis'); ?>">Yuk register sekarang!</a></h6>
+                        <h6 class="mt-3 quest">Belum ada akun? <a href="<?php echo base_url('/register'); ?>">Yuk register sekarang!</a></h6>
                                 <div class="divider row"></div>
                         <div>
-                            <form action="<?php echo base_url('/ceklablogin/login') ?>" method="post">
+                            <form action="<?php echo base_url('/login/login') ?>" method="post">
                             <?php if(isset($error_message)) { ?>
                             <div class="alert alert-danger" role="alert">
                               <?= $error_message ?>

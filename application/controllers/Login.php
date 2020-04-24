@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Ceklablogin extends CI_Controller {
+class Login extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
@@ -10,7 +10,7 @@ class Ceklablogin extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('ceklab-loginpage');
+		$this->load->view('Login/login');
 	}
 
 	public function login(){
@@ -21,11 +21,17 @@ class Ceklablogin extends CI_Controller {
 
 		if($this->Profile_model->login($data) == true){
 			$this->session->set_userdata('username', $data['username']);
-			var_dump($data);
+			// var_dump($data);
+			$this->load->view('Dashboard/dashboard');
 		}else {
 			$data['error_message'] = "Username atau Password Salah";
-			$this->load->view('ceklab-loginpage', $data);
+			$this->load->view('Login/login', $data);
 		}
+	}
+
+	public function logout(){
+		$this->session->unset_userdata('username');
+		redirect('/Login/index');
 	}
 }
 ?>

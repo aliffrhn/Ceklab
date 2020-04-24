@@ -13,6 +13,8 @@
         <script src="<?php echo ('https://unpkg.com/ionicons@5.0.0/dist/ionicons.js'); ?>"></script>
     </head>
     <body>
+        <!-- Include Sidebar Navbar -->
+        <?php $this->load->view('Navbar/navbar') ?>
         <div class="container-fluid bg-top">
             <div class="p-3">
                 <div class="row align-items-center justify-content-left">

@@ -15,6 +15,8 @@
     
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/ced76fa7d3.js" crossorigin="anonymous"></script>
+
+    
 </head>
 <style>
     .card {
@@ -107,6 +109,9 @@
     }
 </style>
 <body>
+    <!-- Include Sidebar Navbar -->
+    <?php $this->load->view('Navbar/navbar') ?>
+
     <!-- Component Header -->
     <div class="bg-top">
         <div class="container">
@@ -114,7 +119,7 @@
                 <div class="row align-items-center justify-content-left">
                     <div class="col-md-auto">
                         <div class="p-3 bg-white rounded box-shadow webkit-center">
-                            <i class="fa fa-money" aria-hidden="true" style="color: #D1BBE6"></i>
+                            <img src="../assets/bx-transfer-alt.svg" alt="" style="width: 40px;">
                         </div>
                     </div>
                     <div class="col pt-3 align-self-center webkit-center">

@@ -19,7 +19,7 @@
     <div class="mx-auto app-login-box col-sm-12 col-md-10 col-lg-9 regis-container">
         <h4>Halo,</h4>
         <p>Hanya butuh <a id="highlight">beberapa detik</a> untuk membuat akun Anda.</p>
-        <form action="<?php echo base_url('/ceklabregis/register') ?>" method="post" enctype="multipart/form-data">
+        <form action="<?php echo base_url('/Register/register') ?>" method="post" enctype="multipart/form-data">
             <?php if(isset($error_message)) { ?>
 			    <div class="alert alert-danger" role="alert">
 				<?= $error_message ?>
@@ -60,7 +60,7 @@
             <br>
             <div class="position-absolute form-check"></div>
             <div class="d-flex align-items-center regis-footer">
-                <h5>Sudah punya akun? <a href="<?php echo base_url('/Ceklablogin'); ?>">Login disini yuk.</a></h5>
+                <h5>Sudah punya akun? <a href="<?php echo base_url('/Login/index'); ?>">Login disini yuk.</a></h5>
                 <div class="ml-0">
                     <button type="submit" class="btn">Buat Akun</button>
                 </div>
