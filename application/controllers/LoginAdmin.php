@@ -11,7 +11,7 @@ class LoginAdmin extends CI_Controller {
     }
 
     public function index(){
-        if($this->session->userdata('variable') !== FALSE) {
+        if($this->session->userdata('username')){
             $data = [];
             $data['transaction'] = $this->Transaction_model->get_transaction();
 

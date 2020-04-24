@@ -10,7 +10,11 @@ class Login extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('Login/login');
+		if($this->session->userdata('username')) {
+			$this->load->view('Dashboard/dashboard');
+		}else {
+			$this->load->view('Login/login');
+		}
 	}
 
 	public function login(){

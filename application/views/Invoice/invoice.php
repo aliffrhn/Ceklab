@@ -39,7 +39,7 @@
 			                    		<div class="card-body text-left">
 			                        		<p class="card-text"><strong>Pasien         :</strong> <?php echo $hasil['pasien']; ?> </p>
 			                        		<p class="card-text"><strong>Umur           :</strong> <?php echo $hasil['umur']; ?></p>
-			                         		<p class="card-text"><strong>JK            :</strong> <?php echo $hasil['gender']; ?></p>
+			                         		<p class="card-text"><strong>Jenis Kelamin          :</strong> <?php echo $hasil['gender']; ?></p>
 			                          		<p class="card-text"><strong>No. Telepon  :</strong> <?php echo $hasil['phone_number']; ?></p>
 			                    		</div>
 			                		</div>
@@ -86,31 +86,24 @@
 			                                	</tr>
 			    							</thead>
 			    							<tbody>
-			    								<!-- foreach ($order->lineItems as $line) or some such thing here -->
+													<?php 
+													// Explode
+													$explode_nama_pemeriksaan = explode("|",$hasil['nama_pemeriksaan']);
 
-				    								<?php 
-				    									/*$i = 1;
-				    									foreach ($transaksi as $data) {}
-				    									
-				    									print_r (explode("|",$hasil[0]['nama_pemeriksaan']));
-				    									var_dump($hasil);*/
+													foreach($explode_nama_pemeriksaan as $key => $data){
 				    								?>
 					    							<tr>
-					    								<td>1</td>
-					    								<td class="text-center">DARAH LENGKAP + LED</td>
+					    								<td><?php echo ++$key ?></td>
+					    								<td class="text-center"><?php echo $data ?></td>
 					    								<td class="text-center"> </td>
-					    								
 					    							</tr>
-					                                <tr>
-					        							<td>2</td>
-					    								<td class="text-center">THORAX PA</td>
-					    								<td class="text-center"> </td>
-					    								
-					    							</tr>
+													<?php
+													}
+													?>
 					                                <tr>
 					            						<td> </td>
 					    								<td class="text-center"><strong>Total</strong></td>
-					    								<td class="text-center"><strong>Rp 448.000</strong></td>
+					    								<td class="text-center"><strong><?php echo $hasil['harga_diskon'] ?></strong></td>
 					    							</tr>
 			    							</tbody>
 			    						</table>
@@ -132,8 +125,6 @@
 	  			<div class="container-sm mt-3 border">
 		  			<div class="panel panel-default panel-pembayaran">
 		  				<div class="file-upload">
-
-		  					
 				  			<div class="panel-heading">
 				  				<h5 class="panel-title"><strong>PEMBAYARAN</strong></h5>
 						    	<div></div>	
@@ -142,9 +133,9 @@
 				            	<p>File :</p>
 
 				            	<?php
-						        echo form_open_multipart('upload/do_upload');
+						        echo form_open_multipart('Transaction/uploadImg');
 						        ?>
-
+								<input type="hidden" name="transaction" value="<?php echo $hasil['kode_transaksi'] ?>">
 				            	<?php echo form_input(['name' => 'userfile','type' => 'file', 'id' => 'filegambar']) ?>
 				            	<p>Kirimkan bukti pembayaran ke :</p>
 				            	<p>09128374659 (BCA) An. PT Mediva Digital Inovasi</p>

@@ -57,7 +57,7 @@
     
     .transaction-card {
         color: white;
-        background-image: linear-gradient(to bottom right, #CA9B39, #EFBA4A);
+        /* background-image: linear-gradient(to bottom right, #CA9B39, #EFBA4A); */
     }
 
     i {
@@ -147,19 +147,22 @@
             <div>
                 <!-- Component Card -->
                 <?php
+                    // var_dump($transaction);
                     foreach ($transaction as $key => $data) {
                 ?>
-                    <div class="d-inline-block rounded card w-100">
-                        <div class="card-body transaction-card" style="background-image: linear-gradient(to bottom right, #CA9B39, #<?php $data['kode_warna'] ?>;">
-                            <div class="d-inline-block">
-                                <h5 class="card-title"><?php echo $data['judul'] ?></h5>
-                                <p class="card-text" style="opacity: 0.5;" ><?php echo $data['tanggal'] ?></p>
-                            </div>
-                            <div class="d-inline-block float-right" style="margin: 0 auto;" >
-                                <h1 class="card-text-price">Rp. <?php echo $data['harga_diskon'] == null ? $data['harga'] : $data['harga_diskon'] ?></h1>
+                    <a href="<?php echo base_url('Invoice/index/'.$data['kode_transaksi']) ?>">
+                        <div class="d-inline-block rounded card w-100">
+                            <div class="card-body transaction-card" style="background-color: #<?php echo $data['kode_warna']?>">
+                                <div class="d-inline-block">
+                                    <h5 class="card-title"><?php echo $data['judul'] ?></h5>
+                                    <p class="card-text" style="color:white;"><?php echo $data['tanggal'] ?></p>
+                                </div>
+                                <div class="d-inline-block float-right" style="margin: 0 auto;" >
+                                    <h1 class="card-text-price">Rp. <?php echo $data['harga_diskon'] == null ? $data['harga'] : $data['harga_diskon'] ?></h1>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 <?php
                     }
                 ?>

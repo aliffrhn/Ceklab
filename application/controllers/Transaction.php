@@ -1,121 +1,127 @@
 <?php
 	class Transaction extends CI_Controller{
 
-		function __construct(){
-      parent::__construct();
-      if(!$this->session->userdata('username')){
-          redirect('Login/index');
-      }
-      $this->load->model('Transaction_model');
-      $this->load->model('Kota_model');
-      $this->load->model('Vendor_model');
-      $this->load->model('Status_model');
-      $this->load->model('Transaksi_model');
-      $this->load->library('session');
-      $this->load->helper(array('form', 'url'));
-    }
+        function __construct(){
+            parent::__construct();
+            if(!$this->session->userdata('username')){
+                redirect('Login/index');
+            }
+            $this->load->model('Transaction_model');
+            $this->load->model('Kota_model');
+            $this->load->model('Vendor_model');
+            $this->load->model('Status_model');
+            $this->load->library('session');
+            $this->load->helper(array('form', 'url'));
+         }
 
-		public function index($pasien_id, $paket_periksa_id){
-			$insert_transaction = $this->Transaksi_model->insertTransaction($pasien_id, $paket_periksa_id);
-			$data['hasil'] = $this->Transaksi_model->getTransactions($insert_transaction);
-      
-			$this->load->view('invoice', $data);
+         public function index(){
+            $data = [];
+            $data['transaction'] = $this->Transaction_model->get_transaction();
+            $data['status'] = $this->Transaction_model->get_button();
+    
+            $this->load->view('Transactionpage/TransactionPage', $data);
+        }
+
+		public function insertTransaction($pasien_id, $paket_periksa_id){
+			$id_transaction = $this->Transaction_model->insertTransaction($pasien_id, $paket_periksa_id);
+            
+            redirect('Invoice/index/'.$id_transaction);
 		}
 
 		public function uploadImg(){
-			$data['hasil'] = $this->Transaksi_model->do_upload();
+            $config['upload_path']          = './uploads/' ;//isi dengan nama folder temoat menyimpan gambar
+			$config['allowed_types']        =  'jpeg|jpg|png';//isi dengan format/tipe gambar yang diterima
+			$config['max_size']             =  2048;//isi dengan ukuran maksimum yang bisa di upload
+			$config['max_width']            =  1024;//isi dengan lebar maksimum gambar yang bisa di upload
+			$config['max_height']           = 768;//isi dengan panjang maksimum gambar yang bisa di upload
 
-			if($this->input->post('submit')){
-				 $this->db->insert('transaksi', $data);
-			}
+            $this->load->library('upload', $config);
+            // $this->upload->initialize($config);
+            
+			if( !$this->upload->do_upload('userfile')){
+                $error = array('error' => $this->upload->display_errors());
+                // var_dump($config);
+                // var_dump($error);
+			}else {
+                $data = array('image' => $this->upload->data());
+            }
+            
+            $kode_transaksi = $this->input->post('transaction');
 
-			$this->load->view('invoice', $data);
+            // Transaksi
+            $status = array(
+                'status_id' => 2
+            );
+            
+            $this->Transaction_model->changeStatusToTwo($status, $kode_transaksi);
+			// $data['hasil'] = $this->Transaction_model->do_upload();
+
+			redirect('Transaction/index');
 		}
 
-    public function index(){
-        $data = [];
-        $data['transaction'] = $this->Transaction_model->get_transaction();
-        $data['status'] = $this->Transaction_model->get_button();
+        public function delete($id){
+            // var_dump($id);
+            $this->Transaction_model->delete_transaction($id);
 
-        $this->load->view('Transactionpage/TransactionPage', $data);
-    }
+            redirect('loginadmin/index', 'refresh');
+        }
 
-    public function delete($id){
-        // var_dump($id);
-        $this->Transaction_model->delete_transaction($id);
+        public function edit($id){
+            $data = [];
+            $data['transaction'] = $this->Transaction_model->get_transactionByID($id);
+            $data['kota'] = $this->Kota_model->getKota();
+            $data['vendor'] = $this->Vendor_model->getVendor();
+            $data['status'] = $this->Status_model->getStatus();
 
-        redirect('loginadmin/index', 'refresh');
-    }
+            $this->load->view('EditTransactionAdmin/EditTransactionAdmin', $data);
+        }
 
-    public function edit($id){
-        $data = [];
-        $data['transaction'] = $this->Transaction_model->get_transactionByID($id);
-        $data['kota'] = $this->Kota_model->getKota();
-        $data['vendor'] = $this->Vendor_model->getVendor();
-        $data['status'] = $this->Status_model->getStatus();
+        public function editForm(){
+            // Transaksi
+            $kode_transaksi = $this->input->post('kode_transaksi');
+            $tanggal = date('y-m-d');
+            $status_id = $this->input->post('status');
 
-        $this->load->view('EditTransactionAdmin/EditTransactionAdmin', $data);
-    }
+            // Paket Periksa
+            $paket_periksa_id = $this->input->post('paket_periksa');
+            $kota = $this->input->post('kota');
+            $vendor = $this->input->post('vendor');
 
-    public function editForm(){
-        // Transaksi
-        $kode_transaksi = $this->input->post('kode_transaksi');
-        $tanggal = date('y-m-d');
-        $status_id = $this->input->post('status');
+            // Pasien
+            $id_pasien = $this->input->post('id_pasien');
+            $umur = $this->input->post('umur');
+            $gender = $this->input->post('gender');
+            $phoneNumber = $this->input->post('phonenumber');
+            $keterangan = $this->input->post('keterangan');
+            $pasien = $this->input->post('pasien');
 
-        // Paket Periksa
-        $paket_periksa_id = $this->input->post('paket_periksa');
-        $kota = $this->input->post('kota');
-        $vendor = $this->input->post('vendor');
+            // Transaksi
+            $transaksi = array(
+                'tanggal' => $tanggal,
+                'status_id' => $status_id,
+            );
+            // var_dump($transaksi);
 
-        // Pasien
-        $id_pasien = $this->input->post('id_pasien');
-        $umur = $this->input->post('umur');
-        $gender = $this->input->post('gender');
-        $phoneNumber = $this->input->post('phonenumber');
-        $keterangan = $this->input->post('keterangan');
-        $pasien = $this->input->post('pasien');
+            // Paket Periksa
+            $paket_periksa = array(
+                'kota_id' => $kota,
+                'vendor_id' => $vendor,
+            );
+            // var_dump($paket_periksa);
 
-        // Transaksi
-        $transaksi = array(
-            'tanggal' => $tanggal,
-            'status_id' => $status_id,
-        );
-        // var_dump($transaksi);
+            // Pasien
+            $pasien = array(
+                'umur' => $umur,
+                'gender' => $gender,
+                'phone_number' => $phoneNumber,
+                'keterangan' => $keterangan,
+                'pasien' => $pasien
+            );
+            // var_dump($pasien, $id_pasien);
 
-        // Paket Periksa
-        $paket_periksa = array(
-            'kota_id' => $kota,
-            'vendor_id' => $vendor,
-        );
-        // var_dump($paket_periksa);
-
-        // Pasien
-        $pasien = array(
-            'umur' => $umur,
-            'gender' => $gender,
-            'phone_number' => $phoneNumber,
-            'keterangan' => $keterangan,
-            'pasien' => $pasien
-        );
-        // var_dump($pasien, $id_pasien);
-
-        // Update Transaksi
-        $this->db->set($transaksi);
-        $this->db->where('kode_transaksi', $kode_transaksi);
-        $this->db->update('transaksi');
-
-        // Update Paket Periksa
-        $this->db->set($paket_periksa);
-        $this->db->where('paket_periksa_id', $paket_periksa_id);
-        $this->db->update('paket_periksa');
-
-        // Update Pasien
-        $this->db->set($pasien);
-        $this->db->where('id_pasien', $id_pasien);
-        $this->db->update('pasien');
-
-        redirect('loginadmin/index', 'refresh');
+            $this->Transaction_model->editTransaction($transaksi, $paket_periksa, $pasien);
+            
+            redirect('loginadmin/index', 'refresh');
         }
     }
 ?>

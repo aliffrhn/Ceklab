@@ -6,13 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/pasien.css');?>"> 
         <script type="text/javascript" src="<?php echo base_url('assets/script/pasien.js');?>"></script>   
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="<?php echo base_url('assets/vendor/bootstrap/css/bootstrap.min.css');?>">
-        <script type="text/javascript" src="<?php echo base_url('assets/script/jquery.js');?>"></script>
-        <script type="text/javascript" src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.min.js');?>"></script>
-        <script type="text/javascript" src="<?php echo base_url('assets/script/popper.js');?>"></script>
-        <script src="<?php echo base_url('https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js');?>"></script>
-        <script src="<?php echo base_url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js');?>"></script>
+        <!-- Bootstrap css-->
+		<link rel="stylesheet" href="<?php echo base_url('./assets/css/bootstrap.min.css')?>" />
+		
+		<!-- js -->
+		<script src="<?php echo base_url('./assets/js/jquery-3.4.1.js') ?>"></script>
+		<script src="<?php echo base_url('./assets/js/popper.js') ?>"></script>
+		<script src="<?php echo base_url('./assets/js/bootstrap.min.js') ?>"></script>
 		<script src="<?php echo base_url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js');?>"></script>
 </head>
 <body>
@@ -24,12 +24,12 @@
 						<h6>INPUT DATA PASIEN</h6>
 					</div>
 				</div>
-				<form class="form-horizontal" action="<?php echo base_url('index.php/PasienHSC/form_pasien/');?>" method="POST">
+				<form class="form-horizontal" action="<?php echo base_url('/Pasien/form_pasien');?>" method="POST">
 					<div class="form-group">
 						<div class="col-md-12">
 							<select style="width:1005px" type="jenisKelamin" class="dropdown" id="jk" name="gender">
-								<option value="lk">Laki - laki</option>
-								<option value="pr">Perempuan</option>
+								<option value="L">Laki - laki</option>
+								<option value="P">Perempuan</option>
 							</select> 
 						</div>
 					</div>
@@ -48,7 +48,6 @@
 						 	<input type="noTelp" class="form-control" id="noTelp" placeholder="No. Telepon / Hp" name="phone_number">
 						</div>
 					</div>
-					
 					<div class="form-group">
 						<div class="col-md-12">
 						 	<input type="alamat" class="form-control" id="alamat" placeholder="Alamat" name="alamat">
