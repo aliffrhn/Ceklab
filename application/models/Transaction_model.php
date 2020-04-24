@@ -5,10 +5,10 @@
             $this->db->select('*');
             $this->db->from('transaksi');
             $this->db->join('paket_periksa', 'paket_periksa.paket_periksa_id = transaksi.paket_periksa_id');
-            $this->db->join('vendor_lab', 'vendor_lab.vendor_id = transaksi.vendor_id');
-            $this->db->join('kota', 'kota.kota_id = transaksi.kota_id');
-            $this->db->join('pemeriksaan', 'pemeriksaan.pemeriksaan_id = transaksi.pemeriksaan_id');
+            $this->db->join('pasien', 'pasien.id_pasien = transaksi.id_pasien');
             $this->db->join('status', 'status.status_id = transaksi.status_id');
+            $this->db->join('kota', 'kota.kota_id = paket_periksa.kota_id');
+            $this->db->join('vendor_lab', 'vendor_lab.vendor_id = paket_periksa.vendor_id');
             
             $data = $this->db->get();
             // var_dump($data->result_array());
@@ -20,9 +20,7 @@
             $this->db->from('transaksi');
             $this->db->where('kode_transaksi', $id);
             $this->db->join('paket_periksa', 'paket_periksa.paket_periksa_id = transaksi.paket_periksa_id');
-            $this->db->join('vendor_lab', 'vendor_lab.vendor_id = transaksi.vendor_id');
-            $this->db->join('kota', 'kota.kota_id = transaksi.kota_id');
-            $this->db->join('pemeriksaan', 'pemeriksaan.pemeriksaan_id = transaksi.pemeriksaan_id');
+            $this->db->join('pasien', 'pasien.id_pasien = transaksi.id_pasien');
             $this->db->join('status', 'status.status_id = transaksi.status_id');
             
             $data = $this->db->get();
