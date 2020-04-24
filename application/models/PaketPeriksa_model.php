@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class M_paketPeriksa extends CI_Model{
+class PaketPeriksa_model extends CI_Model{
     public function getCity(){
         $this->db->select('*');
         $this->db->from('kota');

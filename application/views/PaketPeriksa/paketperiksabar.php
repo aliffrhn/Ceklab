@@ -17,12 +17,14 @@
 </head>
 
 <body class="bg-index">
+    <!-- Navbar Sidebar -->
+    <?php $this->load->view('Navbar/navbar') ?>
     <div class="container-fluid bg-top">
         <div class="p-3">
             <div class="row align-items-center justify-content-left">
                 <div class="col-md-auto">
                     <div class="p-3 bg-white rounded box">
-                        <ion-icon name="gift"></ion-icon>
+                        <img src="../assets/bx-first-aid.svg" alt="" style="width: 32px; height: 32px;">
                     </div>
                 </div>
                 <div class="col pt-3 align-self-center">

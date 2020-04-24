@@ -20,7 +20,7 @@
                 <div class="row align-items-center justify-content-left">
                     <div class="col-md-auto">
                         <div class="p-3 bg-white rounded box">
-                            <ion-icon name="rocket-outline" id="rocket"></ion-icon>
+                            <img src="../assets/bx-clinic.svg" alt="" style="width: 32px; height: 32px;">
                         </div>
                     </div>
                     <div class="col pt-3 align-self-center">

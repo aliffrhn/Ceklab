@@ -136,12 +136,12 @@
                     <a href="<?php echo base_url('ResikoDiabetes/index')?>">Diabetes</a>
                 </li>
                 <li>
-                    <a href="#">COVID-19</a>
+                    <a href="<?php echo base_url('ResikoCovid/index')?>">COVID-19</a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="#">Paket Periksa</a>
+            <a href="<?php echo base_url('PaketPeriksa/index')?>">Paket Periksa</a>
         </li>
         <li>
             <a href="<?php echo base_url('Transaction/index')?>">Transaksi</a>

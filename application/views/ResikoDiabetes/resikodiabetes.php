@@ -20,12 +20,12 @@
                 <div class="row align-items-center justify-content-left">
                     <div class="col-md-auto">
                         <div class="p-3 bg-white rounded box">
-                            <ion-icon name="rocket-outline" id="rocket"></ion-icon>
+                            <img src="../assets/bx-clinic.svg" alt="" style="width: 32px; height: 32px;">
                         </div>
                     </div>
                     <div class="col pt-3 align-self-center">
                         <h5 class="title-bar">Cek Resiko Diabetes</h5>
-                            <p class="subtitle-bar">Penyakit yang menjadi pembunuh nomor 1 bersama Jantung dan Kanker</p>
+                        <p class="subtitle-bar">Penyakit yang menjadi pembunuh nomor 1 bersama Jantung dan Kanker</p>
                     </div>
                 </div>
             </div>

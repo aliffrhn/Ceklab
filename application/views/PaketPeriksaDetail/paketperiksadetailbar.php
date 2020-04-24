@@ -14,6 +14,8 @@
 </head>
 
 <body class="bg-index">
+    <!-- Navbar Sidebar  -->
+    <?php $this->load->view('Navbar/navbar') ?>
     <div class="container-fluid bg-top">
         <div class="p-3">
             <div class="row align-items-center pr-3 pl-3 justify-content-between">

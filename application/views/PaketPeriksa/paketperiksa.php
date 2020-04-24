@@ -16,7 +16,7 @@
             <div class="row justify-content-start" id="packageList">
                 <?php foreach ($packages as $val) { ?>
                     <div class="col-sm-auto">
-                        <a class="card mb-3 mt-3 text-center shadow-card" style="text-decoration: none" href="http://localhost/Ceklab/index.php/Paket_Periksa_Controller/detail?id=<?php echo $val['paket_periksa_id'] ?>">
+                        <a class="card mb-3 mt-3 text-center shadow-card" style="text-decoration: none" href="http://localhost/Ceklab/index.php/PaketPeriksa/detail?id=<?php echo $val['paket_periksa_id'] ?>">
                             <img class="card-img-top img-fluid p-3 mx-auto" style="width: 200px; height:200px" src="<?php echo $val['photo_url'] ?>" alt="covid-19 poster">
                             <div class="card-body">
                                 <h6 style="font-weight: bold; color:grey" class="card-title"><?php echo $val['judul'] ?></h4>
@@ -28,10 +28,11 @@
         </div>
     </div>
     <script>
+        // Ajax
         function getList(id) {
             $("#packageList").empty();
             $.ajax({
-                url: "http://localhost/CekLab/index.php/Paket_Periksa_Controller/getListPackageById",
+                url: "http://localhost/CekLab/index.php/PaketPeriksa/getListPackageById",
                 data: {
                     'id': id
                 },
