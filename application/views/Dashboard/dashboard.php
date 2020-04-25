@@ -38,7 +38,7 @@
                                 <div class="" style="margin-left:15px; margin-top: 15px;">
                                     <h4>Paket Periksa</h4>
                                 </div>
-                                <a href="#" class="btn btn-link" style="margin-left:3px;">Check Now</a>
+                                <a href="<?php echo base_url('PaketPeriksa/index')?>" class="btn btn-link" style="margin-left:3px;">Check Now</a>
                             </div>
                         </div>
                     </div>

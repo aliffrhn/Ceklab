@@ -2,13 +2,17 @@
     class Transaction_model extends CI_Model {
 
         public function get_transaction(){
+            $username = $this->session->userdata('username');
+
             $this->db->select('*');
             $this->db->from('transaksi');
+            $this->db->where('username', $username);
             $this->db->join('paket_periksa', 'paket_periksa.paket_periksa_id = transaksi.paket_periksa_id');
             $this->db->join('pasien', 'pasien.id_pasien = transaksi.id_pasien');
             $this->db->join('status', 'status.status_id = transaksi.status_id');
             $this->db->join('kota', 'kota.kota_id = paket_periksa.kota_id');
             $this->db->join('vendor_lab', 'vendor_lab.vendor_id = paket_periksa.vendor_id');
+            $this->db->order_by("kode_transaksi", "desc");
             
             $data = $this->db->get();
             // var_dump($data->result_array());

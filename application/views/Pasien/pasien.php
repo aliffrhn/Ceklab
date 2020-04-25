@@ -21,13 +21,14 @@
 			<div class="container-sm mt-4 mb-4 border">
 				<div class="col-sm mt-3 ml-3 mb-3">
 					<div class="input-title">
-						<h6>INPUT DATA PASIEN</h6>
+						<h3>INPUT DATA PASIEN</h3>
 					</div>
 				</div>
 				<form class="form-horizontal" action="<?php echo base_url('/Pasien/form_pasien');?>" method="POST">
 					<div class="form-group">
 						<div class="col-md-12">
-							<select style="width:1005px" type="jenisKelamin" class="dropdown" id="jk" name="gender">
+							<select class="form-control" type="jenisKelamin" class="dropdown" id="jk" name="gender">
+								<option selected>Choose Gender...</option>
 								<option value="L">Laki - laki</option>
 								<option value="P">Perempuan</option>
 							</select> 
@@ -35,43 +36,43 @@
 					</div>
 					<div class="form-group">
 						<div class="col-md-12">
-						 	<input type="nama" class="form-control" id="nama" placeholder="Nama Lengkap" name="pasien">
+						 	<input type="nama" class="form-control" id="nama" placeholder="Nama Lengkap" name="pasien" required>
 						 </div>
 					</div>
 					<div class="form-group">
 						<div class="col-md-12">
-						 	<input type="umur" class="form-control" id="umur" placeholder="Umur" name="umur">
+						 	<input type="umur" class="form-control" id="umur" placeholder="Umur" name="umur" required>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-md-12">
-						 	<input type="noTelp" class="form-control" id="noTelp" placeholder="No. Telepon / Hp" name="phone_number">
+						 	<input type="noTelp" class="form-control" id="noTelp" placeholder="No. Telepon / Hp" name="phone_number" required>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-md-12">
-						 	<input type="alamat" class="form-control" id="alamat" placeholder="Alamat" name="alamat">
+						 	<input type="alamat" class="form-control" id="alamat" placeholder="Alamat" name="alamat" required>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-md-12">
 							<div class="row">
       							<div class="col">
-        						 	<input style="width: 500px" type="date" id="tgl" name="tanggal" placeholder="Tanggal">
+        						 	<input type="date" class="form-control" id="tgl" name="tanggal" placeholder="Tanggal"  required>
       							</div>
       							<div class="col">
-        							<input type="waktu" class="form-control" placeholder="Waktu" name="waktu">
+        							<input type="time" class="form-control" name="waktu" placeholder="Waktu" required>
       							</div>
     						</div>
     					</div>
 					</div>
 					<div class="form-group">
 						<div class="col-md-12">
-							<textarea cols="140" rows="3" type="keterangan" id="ket" placeholder="Keterangan..." name="keterangan"></textarea>
+							<textarea cols="140" rows="3" type="keterangan" class="form-control" id="ket" placeholder="Keterangan..." name="keterangan"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
-						  <input type="hidden" id="periksaId" name="periksaId" value="<?php echo $paket_periksa_id ?>">
+						  <input type="hidden" id="periksaId" name="periksaId" value="<?php echo $paket_periksa_id ?>" required>
 					</div>
 					<div class="form-group">
 						<div class="col-md-12">

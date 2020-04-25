@@ -31,7 +31,8 @@
                     </div>
                 </div>
                 <div class="col-md-auto">
-                    <form action="" method="">
+                    <form action="<?php echo base_url('/Pasien/index') ?>" method="POST">
+                        <input type="hidden" value="<?php echo $package[0]['paket_periksa_id']?>" name="paket_periksa_id" />
                         <button type="submit" class="btn btn-glow" aria-expanded="false">Pesan Sekarang</button>
                     </form>
                 </div>
