@@ -87,7 +87,7 @@
 
 		}
 
-        public function editTransaction($transaksi, $paket_periksa, $pasien){
+        public function editTransaction($kode_transaksi, $paket_periksa_id, $id_pasien, $transaksi, $paket_periksa, $pasien){
             // Update Transaksi
             $this->db->set($transaksi);
             $this->db->where('kode_transaksi', $kode_transaksi);
@@ -109,6 +109,12 @@
             $this->db->set($status);
             $this->db->where('kode_transaksi', $kode_transaksi);
             $this->db->update('transaksi');
+        }
+
+        public function insertURLImg($kode_transaksi,$url){
+            $data = ['image' => $url];
+            $this->db->where('kode_transaksi',$kode_transaksi);
+            $this->db->update('transaksi',$data);
         }
     }
 ?>

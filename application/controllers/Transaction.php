@@ -32,18 +32,18 @@
             $config['upload_path']          = './uploads/' ;//isi dengan nama folder temoat menyimpan gambar
 			$config['allowed_types']        =  'jpeg|jpg|png';//isi dengan format/tipe gambar yang diterima
 			$config['max_size']             =  2048;//isi dengan ukuran maksimum yang bisa di upload
-			$config['max_width']            =  1024;//isi dengan lebar maksimum gambar yang bisa di upload
-			$config['max_height']           = 768;//isi dengan panjang maksimum gambar yang bisa di upload
+			$config['max_width']            =  5000;//isi dengan lebar maksimum gambar yang bisa di upload
+			$config['max_height']           =  5000;//isi dengan panjang maksimum gambar yang bisa di upload
 
             $this->load->library('upload', $config);
             // $this->upload->initialize($config);
             
 			if( !$this->upload->do_upload('userfile')){
                 $error = array('error' => $this->upload->display_errors());
-                // var_dump($config);
-                // var_dump($error);
+                var_dump($config);
+                var_dump($error);
 			}else {
-                $data = array('image' => $this->upload->data());
+                $data = $this->upload->data('file_name');
             }
             
             $kode_transaksi = $this->input->post('transaction');
@@ -54,7 +54,10 @@
             );
             
             $this->Transaction_model->changeStatusToTwo($status, $kode_transaksi);
-			// $data['hasil'] = $this->Transaction_model->do_upload();
+            // $data['hasil'] = $this->Transaction_model->do_upload();
+            
+            //insert
+            $this->Transaction_model->insertURLImg($kode_transaksi,$data);
 
 			redirect('Transaction/index');
 		}
@@ -119,7 +122,7 @@
             );
             // var_dump($pasien, $id_pasien);
 
-            $this->Transaction_model->editTransaction($transaksi, $paket_periksa, $pasien);
+            $this->Transaction_model->editTransaction($kode_transaksi, $paket_periksa_id, $id_pasien, $transaksi, $paket_periksa, $pasien);
             
             redirect('loginadmin/index', 'refresh');
         }
