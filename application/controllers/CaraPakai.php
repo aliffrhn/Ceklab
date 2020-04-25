@@ -8,7 +8,7 @@
 
 
 		public function index(){
-			$this->load->view('caraPakai');
+			$this->load->view('Carapakai/carapakai');
 		}
 
 	}

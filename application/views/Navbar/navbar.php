@@ -2,7 +2,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
 <script>
-    $(document).ready(function () {
+    $(document).{
 
     $("#sidebar").mCustomScrollbar({
         theme: "minimal"
@@ -160,7 +160,7 @@
             <?php
                 if($this->session->userdata('username')){
             ?>
-                <button class="btn btn-secondary" style="float:right;">Dah Login Kok</button>
+                <button class="btn btn-secondary" style="float:right;"><?php echo $this->session->userdata('username') ?></button>
             <?php
                 }else{
             ?>

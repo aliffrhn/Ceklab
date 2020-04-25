@@ -325,7 +325,7 @@
                         <a class="nav-link font-weight-bold" href="#">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#">Cara Pakai</a>
+                        <a class="nav-link font-weight-bold" href="<?php echo base_url('/Carapakai/index') ?>">Cara Pakai</a>
                     </li>
                 </ul>
             </div>
