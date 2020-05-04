@@ -51,13 +51,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($cities as $city) { ?>
+                        <?php 
+                            $cities_encode = json_decode($cities);
+                            // var_dump($cities_encode[0]->kota_id);
+                        ?>
+                        <?php foreach ($cities_encode as $city) { ?>
                             <tr>
-                                <th><?php echo $city['kota_id'] ?></th>
-                                <td><?php echo $city['nama_kota'] ?></td>
+                                <th><?php echo $city->kota_id ?></th>
+                                <td><?php echo $city->nama_kota ?></td>
                                 <td>
-                                    <a href="<?php echo base_url() . 'index.php/AdminController/editCity/' . $city['kota_id'] ?>" class="btn btn-primary">Edit</a>
-                                    <a href="<?php echo base_url() . 'index.php/AdminController/deleteCity/' . $city['kota_id'] ?>" class="btn btn-danger">Delete</a>
+                                    <a href="<?php echo base_url() . 'index.php/AdminController/editCity/' . $city->kota_id ?>" class="btn btn-primary">Edit</a>
+                                    <a href="<?php echo base_url() . 'index.php/AdminController/deleteCity/' . $city->kota_id ?>" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                         <?php } ?>

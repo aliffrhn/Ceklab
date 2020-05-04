@@ -5,7 +5,7 @@ class M_admin extends CI_Model{
     public function getAllCity(){
         $query = $this->db->get('kota');
         if($query->num_rows() > 0){
-            return $query->result_array();
+            return json_encode($query->result_array());
         } else {
             return false;
         }

@@ -334,7 +334,7 @@
     <div class="container">
         <div class="jumbotron row flex-row-reverse">
             <div class="col-md-6">
-                <img class="img-fluid jumbotron-img" src="https://ceklab.id/wp-content/uploads/2019/07/home-service.jpg" alt="cek-lab-hero">
+                <img class="img-fluid jumbotron-img" src="<? echo base_url('/assets/ceklab-hero.jpeg')?>" alt="cek-lab-hero">
             </div>
             <div class="col-md-6 align-self-center m-text-center">
                 <h1 class="display-5 jumbotron-head">Periksa Lab? Ingat</h1>
@@ -351,16 +351,16 @@
             <h5 class="font-weight-light section-descheader-number">Pemeriksaan Telah Dilakukan</h5>
         </div>
         <div class="slider-autoplay">
-            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/kalgen-bekerjasama-dengan-ceklab.id-untuk-periksa-1-oera6xy41e9s10j73jory651y05jgum4yoqp8ylrbk.jpg"></div>
-            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/kimia-farma-kerjasama-dengan-ceklab.id-untuk-periksa-diabetes-1-oerad6ljestb3tgvnqsm03g7x3e9kidzhknqy3co0g.jpg"></div>
-            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/bio-test-cek-diabet-ceklab.id_-oemumx1i1h4txm1t65rwf5la2lq0ri8e8ehfrdbssw.jpg"></div>
-            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/parahita-gejala-diabet-ceklab.id_-1-oera5rndhunvik8myjekbytb7ny0ugy7svdunich3k.jpg"></div>
-            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/laboratorium-klinik-cito-ceklab.id_-1-oerafwcr5kj4n9ivsx1t7es5p60ft162j0i8uvbq1c.jpg"></div>
-            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/kalgen-bekerjasama-dengan-ceklab.id-untuk-periksa-1-oera6xy41e9s10j73jory651y05jgum4yoqp8ylrbk.jpg"></div>
-            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/kimia-farma-kerjasama-dengan-ceklab.id-untuk-periksa-diabetes-1-oerad6ljestb3tgvnqsm03g7x3e9kidzhknqy3co0g.jpg"></div>
-            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/bio-test-cek-diabet-ceklab.id_-oemumx1i1h4txm1t65rwf5la2lq0ri8e8ehfrdbssw.jpg"></div>
-            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/parahita-gejala-diabet-ceklab.id_-1-oera5rndhunvik8myjekbytb7ny0ugy7svdunich3k.jpg"></div>
-            <div><img src="https://ceklab.id/wp-content/uploads/elementor/thumbs/laboratorium-klinik-cito-ceklab.id_-1-oerafwcr5kj4n9ivsx1t7es5p60ft162j0i8uvbq1c.jpg"></div>
+            <div><img src="<?php echo base_url('/assets/slide-1.jpeg') ?>"></div>
+            <div><img src="<?php echo base_url('/assets/slide-2.jpeg')?>"></div>
+            <div><img src="<?php echo base_url('/assets/slide-3.jpeg')?>"></div>
+            <div><img src="<?php echo base_url('/assets/slide-4.jpeg')?>"></div>
+            <div><img src="<?php echo base_url('/assets/slide-5.jpeg')?>"></div>
+            <div><img src="<?php echo base_url('/assets/slide-1.jpeg') ?>"></div>
+            <div><img src="<?php echo base_url('/assets/slide-2.jpeg')?>"></div>
+            <div><img src="<?php echo base_url('/assets/slide-3.jpeg')?>"></div>
+            <div><img src="<?php echo base_url('/assets/slide-4.jpeg')?>"></div>
+            <div><img src="<?php echo base_url('/assets/slide-5.jpeg')?>"></div>
         </div>
         <div>
             <div style="margin: 120px 0 50px 0;" class="text-center">
@@ -369,19 +369,19 @@
             </div>
             <div class="card-deck text-center">
                 <div class="card">
-                    <img class="card-img-top section-img-card" src="https://ceklab.id/wp-content/uploads/2019/09/gostartupindonesia.png" alt="Card image cap">
+                    <img class="card-img-top section-img-card" src="<?php echo base_url('/assets/award-1.png')?>" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title section-descheader-card">2nd National Winner of Go Startup Indonesia by Bekraf 2019</h5>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top section-img-card" src="https://ceklab.id/wp-content/uploads/2019/09/nextdev-1.png" alt="Card image cap">
+                    <img class="card-img-top section-img-card" src="<?php echo base_url('/assets/award-2.png')?>" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title section-descheader-card">Regional Winner of The Nextdev Social Impact by Telkomsel</h5>
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top h-50 section-img-card" style="width:50px;" src="https://ceklab.id/wp-content/uploads/2019/09/idff-2.png" alt="Card image cap">
+                    <img class="card-img-top h-50 section-img-card" style="width:50px;" src="<?php echo base_url('/assets/award-3.png')?>" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title section-descheader-card">One of the "Top 23 Fundable Startups of 2019" Indonesia Fund Fest</h5>
                     </div>
@@ -493,7 +493,8 @@
         <div class="container" style="margin-top: 120px;">
             <div class="row">
                 <div class="col col-md-6">
-                    <img src="<?php echo $value['photo_url']?>" alt="" style="width: 350px; height: 400px;">
+                    <!-- nama di database file namenya -->
+                    <img src="<?php echo base_url('/assets').'/'.$value['photo_url']?>" alt="" style="width: 350px; height: 400px;">
                     <h3 style="margin-top:25px;">Pendaftaran Ditutup Pada :</h3>
                     <div id="<?php echo $value['pendaftaran_id']?>" data-countdown="<?php echo $value['waktu_penutupan'] ?>" class="countdown">
                     </div>

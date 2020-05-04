@@ -5,6 +5,9 @@ class AdminController extends CI_Controller{
     public function __construct()
     {
         parent::__construct();
+        if(!$this->session->userdata('username')){
+            $this->load->view('LoginAdmin/LoginAdmin');
+        } 
         $this->load->model('M_admin');
         $this->load->library('session');
     }
@@ -14,7 +17,7 @@ class AdminController extends CI_Controller{
         $res = $this->M_admin->getAllCity();
         if ($res != false) {
             $data['cities'] = $res;
-            $this->load->view('admin/crud_kota_view',$data);
+            $this->load->view('admin/crud_kota_view', $data);
         } else {
             $data['cities'] = array();
             $this->load->view('admin/crud_kota_view', $data);
